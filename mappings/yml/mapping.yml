@@ -33,14 +33,14 @@ prefixes:
   rml: http://semweb.mmlab.be/ns/rml#
   rr: http://www.w3.org/ns/r2rml#
   sdmx-dimension: http://purl.org/linked-data/sdmx/2009/dimension#
-  edintgast: http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/
+  edintgast: https://edint.es/def/cubo-gasto-comercial/
   edintdimension: http://vocab.linkeddata.es/datosabiertos/def/dimension#
   edintmeasure: http://vocab.linkeddata.es/datosabiertos/def/measure#
 mappings:
   mappings_tm:
     sources:
     - [../pathtodata.csv~csv]
-    s: http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/o$(Indice)
+    s: https://edint.es/def/cubo-gasto-comercial/o$(Indice)
     po:
     - [rdf:type, qb:Observation]
     - [edintdimension:refAdminRegion, $(Area)]

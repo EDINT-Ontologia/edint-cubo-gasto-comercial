@@ -1,6 +1,6 @@
 # GAS05: ¿Cuál es el gasto comercial total por nacionalidad en una región y periodo concretos?
 
-PREFIX edintgast: <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/>
+PREFIX edintgast: <https://edint.es/def/cubo-gasto-comercial/>
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
