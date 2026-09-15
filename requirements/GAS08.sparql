@@ -1,6 +1,6 @@
 # GAS08: ¿Cuál es el gasto comercial total de una actividad económica concreta en una región y periodo concretos?
 
-PREFIX edintgast: <https://edint.es/def/cubo-gasto-comercial/>
+PREFIX edintgast: <https://edint.es/def/cubo-gasto-comercial#>
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#>
 PREFIX edintmeasure: <http://vocab.linkeddata.es/datosabiertos/def/measure#>
