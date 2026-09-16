@@ -1,4 +1,4 @@
-@prefix edintgast: <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> .
+@prefix edintgast: <https://edint.es/def/cubo-gasto-comercial#> .
 @prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:      <http://www.w3.org/2002/07/owl#> .
@@ -18,7 +18,7 @@
 # -- Data Set --------------------------------------------
 
 edintgast: a qb:DataSet, owl:Ontology ; 
-    owl:versionIRI <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/0.1.0> ;
+    owl:versionIRI <https://edint.es/def/cubo-gasto-comercial/0.1.0> ;
     owl:imports <http://purl.org/linked-data/cube> ;
     dcterms:creator "Daniel Doña" ;
     dcterms:creator "Edna Ruckhaus" ;
@@ -30,7 +30,7 @@ edintgast: a qb:DataSet, owl:Ontology ;
         "Vocabulary for the representation of dimensions and measures of commercial expenditure within the EDINT project"@en ;
     dcterms:issued "2026-04-20"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    vann:preferredNamespaceUri <http://vocab.linkeddata.es/datosabiertos/def//comercio/cubo-gasto-comercial#> ;
+    vann:preferredNamespaceUri <https://edint.es/def/cubo-gasto-comercial#> ;
     vann:preferredNamespacePrefix "edintgast" ;
     owl:versionInfo "0.1.0" ;
     dcterms:subject

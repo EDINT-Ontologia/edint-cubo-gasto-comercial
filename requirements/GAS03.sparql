@@ -1,6 +1,6 @@
 # GAS03: ¿Cuál es el gasto comercial total por sector en una región y periodo concretos?
 
-PREFIX edintgast: <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/>
+PREFIX edintgast: <https://edint.es/def/cubo-gasto-comercial#>
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
