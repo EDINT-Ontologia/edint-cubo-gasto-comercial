@@ -15,6 +15,7 @@
 @prefix edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#> .
 @prefix edintmeasure: <http://vocab.linkeddata.es/datosabiertos/def/measure#> .
 @prefix schema: <http://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 
 # -- Data Set --------------------------------------------
@@ -22,7 +23,12 @@
 <https://edint.es/def/cubo-gasto-comercial> a qb:DataSet, owl:Ontology ; 
     owl:versionIRI <https://edint.es/def/cubo-gasto-comercial/0.1.0> ;
     owl:imports <http://purl.org/linked-data/cube> ;
-    dcterms:creator "Daniel Doña" ;
+    dcterms:creator                   [ foaf:name "Daniel Doña" ; schema:affiliation <https://oeg.fi.upm.es/> ],
+                  [ foaf:name "Edna Ruckhaus" ; schema:affiliation <https://oeg.fi.upm.es/> ],
+                  [ foaf:name "Lucía Sánchez" ; schema:affiliation <https://oeg.fi.upm.es/> ],
+                  [ foaf:name "Maria del Socorro Bernardos" ; schema:affiliation <https://oeg.fi.upm.es/> ],
+                  [ foaf:name "Oscar Corcho" ; schema:affiliation <https://oeg.fi.upm.es/> ],
+                  [ foaf:name "Diego Conde" ; schema:affiliation <https://oeg.fi.upm.es/> ] ;
     dcterms:creator "Edna Ruckhaus" ;
     dcterms:creator "Lucía Sánchez" ;
     dcterms:creator "Oscar Corcho" ;
@@ -111,3 +117,5 @@ edintmeasure:expenditureAmount  a qb:MeasureProperty;
     rdfs:comment "Cantidad monetaria total del gasto realizado en un contexto determinado"@es, "Total monetary amount of expenditure made in a given context."@en ;
     rdfs:subPropertyOf sdmx-measure:obsValue;
     rdfs:range xsd:decimal .
+
+<https://oeg.fi.upm.es/> a foaf:Organization ; foaf:name "Ontology Engineering Group, UPM" .
