@@ -41,7 +41,7 @@
         pubsec:economia ;
     qb:structure edintgast:dsd  ;
     owl:priorVersion <https://github.com/EDINT-Ontologia/edint-cubo-gasto-comercial/releases/tag/v0.2.0> ;
-    dcterms:publisher <https://www.femp.es/> ;
+    dcterms:publisher [ foaf:name "FEMP" ; foaf:homepage <https://www.femp.es/> ; schema:affiliation "Federación Española de Municipios y Provincias" ] ;
     dcterms:bibliographicCitation """Cubo de Datos EDINT de Gasto Comercial. EDINT. Revision: v0.2.1."""@es ;
     schema:creativeWorkStatus "Ontology Specification"@en ;
     dcterms:abstract
