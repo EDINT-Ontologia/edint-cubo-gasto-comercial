@@ -14,6 +14,8 @@
 @prefix time:     <http://www.w3.org/2006/time#> .
 @prefix edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#> .
 @prefix edintmeasure: <http://vocab.linkeddata.es/datosabiertos/def/measure#> .
+@prefix schema: <http://schema.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
 
 # -- Data Set --------------------------------------------
 
@@ -36,7 +38,22 @@ edintgast: a qb:DataSet, owl:Ontology ;
     dcterms:subject
         pubsec:comercio ,
         pubsec:economia ;
-    qb:structure edintgast:dsd .
+    qb:structure edintgast:dsd  ;
+    owl:priorVersion <https://github.com/EDINT-Ontologia/edint-cubo-gasto-comercial/releases/tag/v0.2.0> ;
+    dcterms:publisher <https://www.femp.es/> ;
+    dcterms:bibliographicCitation """Vocabulario para la representación del cubo de indicadores de gasto comercial dentro del proyecto EDINT. EDINT. Revision: v0.2.1."""@es ;
+    schema:creativeWorkStatus "Ontology Specification"@en ;
+    dcterms:abstract
+        """
+El propósito de este vocabulario es proporcionar la definición de la estructura del cubo de datos de gasto comercial. Para ello, se reutiliza el vocabulario W3C Data Cube y se han creado las instancias necesarias para definir dicha estructura, indicando las dimensiones y medidas utilizadas en este cubo.
+
+Además, se reutilizan varios vocabularios y listas de códigos para describir los diferentes desgloses de la información sobre gasto comercial, como el territorio, el periodo de referencia, el sector de actividad económica y la nacionalidad.
+"""@es,
+        """
+The purpose of this vocabulary is to provide the definition of the structure of the commercial expenditure data cube. To this end, the W3C Data Cube vocabulary is reused, and the necessary instances have been created to define such structure, indicating the dimensions and measures used in this cube.
+
+Additionally, several vocabularies and code lists are reused to describe the different breakdowns of commercial expenditure information, such as territory, reference period, economic activity sector, and nationality.
+"""@en  .
 
 edintgast:dsd a qb:DataStructureDefinition;
      qb:component
