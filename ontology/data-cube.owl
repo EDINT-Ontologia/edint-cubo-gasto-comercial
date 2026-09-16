@@ -28,8 +28,8 @@ edintgast: a qb:DataSet, owl:Ontology ;
     dcterms:creator "Oscar Corcho" ;
     dcterms:creator "Socorro Bernardos" ;
     dcterms:creator "Diego Conde" ;
-    dcterms:title "Vocabulario para la representación del cubo de dimensiones y medidas de gasto comercial dentro del proyecto EDINT"@es ,
-        "Vocabulary for the representation of dimensions and measures of commercial expenditure within the EDINT project"@en ;
+    dcterms:title "Cubo de Datos EDINT de Gasto Comercial"@es  ;
+    dcterms:title "EDINT Commercial Expenditure Data Cube"@en ;
     dcterms:issued "2026-04-20"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespaceUri <https://edint.es/def/cubo-gasto-comercial#> ;
