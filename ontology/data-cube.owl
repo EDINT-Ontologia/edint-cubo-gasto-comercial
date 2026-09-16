@@ -41,7 +41,7 @@
     qb:structure edintgast:dsd  ;
     owl:priorVersion <https://github.com/EDINT-Ontologia/edint-cubo-gasto-comercial/releases/tag/v0.2.0> ;
     dcterms:publisher <https://www.femp.es/> ;
-    dcterms:bibliographicCitation """Vocabulario para la representación del cubo de indicadores de gasto comercial dentro del proyecto EDINT. EDINT. Revision: v0.2.1."""@es ;
+    dcterms:bibliographicCitation """Cubo de Datos EDINT de Gasto Comercial. EDINT. Revision: v0.2.1."""@es ;
     schema:creativeWorkStatus "Ontology Specification"@en ;
     dcterms:abstract
         """
