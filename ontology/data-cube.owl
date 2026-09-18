@@ -14,29 +14,56 @@
 @prefix time:     <http://www.w3.org/2006/time#> .
 @prefix edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#> .
 @prefix edintmeasure: <http://vocab.linkeddata.es/datosabiertos/def/measure#> .
+@prefix schema: <https://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
 
 # -- Data Set --------------------------------------------
 
-edintgast: a qb:DataSet, owl:Ontology ; 
-    owl:versionIRI <https://edint.es/def/cubo-gasto-comercial/0.1.0> ;
+<https://edint.es/def/cubo-gasto-comercial> a qb:DataSet, owl:Ontology ; 
+    owl:versionIRI <https://edint.es/def/cubo-gasto-comercial/0.2.1> ;
     owl:imports <http://purl.org/linked-data/cube> ;
-    dcterms:creator "Daniel Doña" ;
-    dcterms:creator "Edna Ruckhaus" ;
-    dcterms:creator "Lucía Sánchez" ;
-    dcterms:creator "Oscar Corcho" ;
-    dcterms:creator "Socorro Bernardos" ;
-    dcterms:creator "Diego Conde" ;
-    dcterms:title "Vocabulario para la representación del cubo de dimensiones y medidas de gasto comercial dentro del proyecto EDINT"@es ,
-        "Vocabulary for the representation of dimensions and measures of commercial expenditure within the EDINT project"@en ;
-    dcterms:issued "2026-04-20"^^xsd:date ;
+    dcterms:creator [ foaf:name "Daniel Doña" ; schema:affiliation <https://oeg.fi.upm.es/> ],
+                  [ foaf:name "Edna Ruckhaus" ; schema:affiliation <https://oeg.fi.upm.es/> ],
+                  [ foaf:name "Lucía Sánchez" ; schema:affiliation <https://oeg.fi.upm.es/> ],
+                  [ foaf:name "Oscar Corcho" ; schema:affiliation <https://oeg.fi.upm.es/> ],
+                  [ foaf:name "Socorro Bernardos" ; schema:affiliation <https://oeg.fi.upm.es/> ],
+                  [ foaf:name "Diego Conde" ; schema:affiliation <https://oeg.fi.upm.es/> ] ;
+    dcterms:title "Cubo de Datos EDINT de Gasto Comercial"@es  ;
+    dcterms:title "EDINT Commercial Expenditure Data Cube"@en ;
+    rdfs:label "Cubo de Datos de Gasto Comercial"@es ;
+    rdfs:label "Commercial Expenditure Data Cube"@en ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespaceUri <https://edint.es/def/cubo-gasto-comercial#> ;
     vann:preferredNamespacePrefix "edintgast" ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "0.2.1" ;
+    dcterms:created "2026-04-20"^^xsd:date ;
+    dcterms:issued  "2026-09-17"^^xsd:date ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
     dcterms:subject
         pubsec:comercio ,
         pubsec:economia ;
-    qb:structure edintgast:dsd .
+    qb:structure edintgast:dsd  ;
+    owl:priorVersion <https://github.com/EDINT-Ontologia/edint-cubo-gasto-comercial/releases/tag/v0.2.0> ;
+    schema:codeRepository <https://github.com/EDINT-Ontologia/edint-cubo-gasto-comercial> ;
+    schema:funding "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" ;
+    dcterms:publisher [ foaf:name "FEMP" ; foaf:homepage <https://www.femp.es/> ; schema:affiliation "Federación Española de Municipios y Provincias" ] ;
+    dcterms:bibliographicCitation """Cubo de Datos EDINT de Gasto Comercial. EDINT. Revisión: v0.2.1."""@es ;
+    dcterms:bibliographicCitation """EDINT Commercial Expenditure Data Cube. EDINT. Revision: v0.2.1."""@en ;
+    schema:creativeWorkStatus "Ontology Specification"@en ;
+    dcterms:description """El propósito de este vocabulario es proporcionar la definición de la estructura del cubo de datos de gasto comercial. Para ello, se reutiliza el vocabulario W3C Data Cube y se han creado las instancias necesarias para definir dicha estructura, indicando las dimensiones y medidas utilizadas en este cubo.  Además, se reutilizan varios vocabularios y listas de códigos para describir los diferentes desgloses de la información sobre gasto comercial, como el territorio, el periodo de referencia, el sector de actividad económica y la nacionalidad."""@es ,
+                         """The purpose of this vocabulary is to provide the definition of the structure of the commercial expenditure data cube. To this end, the W3C Data Cube vocabulary is reused, and the necessary instances have been created to define such structure, indicating the dimensions and measures used in this cube.  Additionally, several vocabularies and code lists are reused to describe the different breakdowns of commercial expenditure information, such as territory, reference period, economic activity sector, and nationality."""@en ;
+    dcterms:abstract
+        """
+El propósito de este vocabulario es proporcionar la definición de la estructura del cubo de datos de gasto comercial. Para ello, se reutiliza el vocabulario W3C Data Cube y se han creado las instancias necesarias para definir dicha estructura, indicando las dimensiones y medidas utilizadas en este cubo.
+
+Además, se reutilizan varios vocabularios y listas de códigos para describir los diferentes desgloses de la información sobre gasto comercial, como el territorio, el periodo de referencia, el sector de actividad económica y la nacionalidad.
+"""@es,
+        """
+The purpose of this vocabulary is to provide the definition of the structure of the commercial expenditure data cube. To this end, the W3C Data Cube vocabulary is reused, and the necessary instances have been created to define such structure, indicating the dimensions and measures used in this cube.
+
+Additionally, several vocabularies and code lists are reused to describe the different breakdowns of commercial expenditure information, such as territory, reference period, economic activity sector, and nationality.
+"""@en  .
 
 edintgast:dsd a qb:DataStructureDefinition;
      qb:component
@@ -94,3 +121,28 @@ edintmeasure:expenditureAmount  a qb:MeasureProperty;
     rdfs:comment "Cantidad monetaria total del gasto realizado en un contexto determinado"@es, "Total monetary amount of expenditure made in a given context."@en ;
     rdfs:subPropertyOf sdmx-measure:obsValue;
     rdfs:range xsd:decimal .
+
+<https://oeg.fi.upm.es/> a foaf:Organization ; foaf:name "Ontology Engineering Group, UPM" .
+@prefix widoco: <https://w3id.org/widoco/vocab#> .
+
+# -- Nombres de fichero de las serializaciones (vocabulario Widoco) --
+<https://edint.es/def/cubo-gasto-comercial> widoco:rdfxmlSerialization "ontology.rdf" ;
+    widoco:turtleSerialization "ontology.ttl" ;
+    widoco:ntSerialization "ontology.nt" ;
+    widoco:jsonldSerialization "ontology.jsonld" .
+# -- Etiquetas de vocabularios (vocabulario Widoco) --
+<https://edint.es/def/cubo-gasto-comercial> widoco:vocabularyLabel [
+    widoco:vocabularyIRI <http://purl.org/linked-data/cube> ;
+    rdfs:label "W3C Data Cube"@es , "W3C Data Cube"@en ] .
+<https://edint.es/def/cubo-gasto-comercial> widoco:vocabularyLabel [
+    widoco:vocabularyIRI <http://vocab.linkeddata.es/datosabiertos/def/dimension> ;
+    rdfs:label "Dimensiones EDINT"@es , "EDINT Dimensions"@en ] .
+<https://edint.es/def/cubo-gasto-comercial> widoco:vocabularyLabel [
+    widoco:vocabularyIRI <http://vocab.linkeddata.es/datosabiertos/def/measure> ;
+    rdfs:label "Medidas EDINT"@es , "EDINT Measures"@en ] .
+<https://edint.es/def/cubo-gasto-comercial> widoco:vocabularyLabel [
+    widoco:vocabularyIRI <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
+    rdfs:label "Territorio (esadm)"@es , "Territory (esadm)"@en ] .
+<https://edint.es/def/cubo-gasto-comercial> widoco:vocabularyLabel [
+    widoco:vocabularyIRI <http://www.w3.org/2006/time> ;
+    rdfs:label "OWL-Time"@es , "OWL-Time"@en ] .
