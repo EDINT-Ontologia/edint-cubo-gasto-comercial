@@ -46,8 +46,8 @@
     schema:codeRepository <https://github.com/EDINT-Ontologia/edint-cubo-gasto-comercial> ;
     schema:funding "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" ;
     dcterms:publisher [ foaf:name "FEMP" ; foaf:homepage <https://www.femp.es/> ; schema:affiliation "Federación Española de Municipios y Provincias" ] ;
-    dcterms:bibliographicCitation """Cubo de Datos EDINT de Gasto Comercial. EDINT. Revisión: v0.2.1."""@es ;
-    dcterms:bibliographicCitation """EDINT Commercial Expenditure Data Cube. EDINT. Revisión: v0.2.1."""@en ;
+    dcterms:bibliographicCitation """Cubo de Datos EDINT de Gasto Comercial. EDINT. Revision: v0.2.1."""@es ;
+    dcterms:bibliographicCitation """EDINT Commercial Expenditure Data Cube. EDINT. Revision: v0.2.1."""@en ;
     schema:creativeWorkStatus "Ontology Specification"@en ;
     dcterms:description """El propósito de este vocabulario es proporcionar la definición de la estructura del cubo de datos de gasto comercial. Para ello, se reutiliza el vocabulario W3C Data Cube y se han creado las instancias necesarias para definir dicha estructura, indicando las dimensiones y medidas utilizadas en este cubo.  Además, se reutilizan varios vocabularios y listas de códigos para describir los diferentes desgloses de la información sobre gasto comercial, como el territorio, el periodo de referencia, el sector de actividad económica y la nacionalidad."""@es ,
                          """The purpose of this vocabulary is to provide the definition of the structure of the commercial expenditure data cube. To this end, the W3C Data Cube vocabulary is reused, and the necessary instances have been created to define such structure, indicating the dimensions and measures used in this cube.  Additionally, several vocabularies and code lists are reused to describe the different breakdowns of commercial expenditure information, such as territory, reference period, economic activity sector, and nationality."""@en ;
