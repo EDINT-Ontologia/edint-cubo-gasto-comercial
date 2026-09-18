@@ -40,13 +40,13 @@ Additionally, several vocabularies and code lists are reused to describe the dif
                                                                               "EDINT Commercial Expenditure Data Cube"@en ;
                                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintgast" ;
                                              <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
-                                             <http://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-cubo-gasto-comercial> ;
-                                             <http://schema.org/creativeWorkStatus> "Ontology Specification"@en ;
-                                             <http://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" ;
                                              rdfs:label "Commercial Expenditure Data Cube"@en ,
                                                         "Cubo de Datos de Gasto Comercial"@es ;
                                              owl:priorVersion <https://github.com/EDINT-Ontologia/edint-cubo-gasto-comercial/releases/tag/v0.2.0> ;
                                              owl:versionInfo "0.2.1" ;
+                                             <https://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-cubo-gasto-comercial> ;
+                                             <https://schema.org/creativeWorkStatus> "Ontology Specification"@en ;
+                                             <https://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" ;
                                              <https://w3id.org/widoco/vocab#jsonldSerialization> "ontology.jsonld" ;
                                              <https://w3id.org/widoco/vocab#ntSerialization> "ontology.nt" ;
                                              <https://w3id.org/widoco/vocab#rdfxmlSerialization> "ontology.rdf" ;
@@ -57,47 +57,47 @@ Additionally, several vocabularies and code lists are reused to describe the dif
                                                                                              _:genid11 ,
                                                                                              _:genid12 .
 
-_:genid1 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
-          <http://xmlns.com/foaf/0.1/name> "Socorro Bernardos" .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Diego Conde" ;
+          <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 
-_:genid2 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
-          <http://xmlns.com/foaf/0.1/name> "Diego Conde" .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "Socorro Bernardos" ;
+          <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 
-_:genid3 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
-          <http://xmlns.com/foaf/0.1/name> "Lucía Sánchez" .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "Edna Ruckhaus" ;
+          <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 
-_:genid4 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
-          <http://xmlns.com/foaf/0.1/name> "Oscar Corcho" .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "Daniel Doña" ;
+          <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 
-_:genid5 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
-          <http://xmlns.com/foaf/0.1/name> "Daniel Doña" .
+_:genid5 <http://xmlns.com/foaf/0.1/name> "Oscar Corcho" ;
+          <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 
-_:genid6 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
-          <http://xmlns.com/foaf/0.1/name> "Edna Ruckhaus" .
+_:genid6 <http://xmlns.com/foaf/0.1/name> "Lucía Sánchez" ;
+          <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 
-_:genid7 <http://schema.org/affiliation> "Federación Española de Municipios y Provincias" ;
-          <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> ;
-          <http://xmlns.com/foaf/0.1/name> "FEMP" .
+_:genid7 <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> ;
+          <http://xmlns.com/foaf/0.1/name> "FEMP" ;
+          <https://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
 
-_:genid8 rdfs:label "Territorio (esadm)"@es ,
-                     "Territory (esadm)"@en ;
-          <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+_:genid8 rdfs:label "EDINT Measures"@en ,
+                     "Medidas EDINT"@es ;
+          <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/measure> .
 
-_:genid9 rdfs:label "OWL-Time"@en ,
-                     "OWL-Time"@es ;
-          <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.w3.org/2006/time> .
+_:genid9 rdfs:label "Dimensiones EDINT"@es ,
+                     "EDINT Dimensions"@en ;
+          <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/dimension> .
 
-_:genid10 rdfs:label "EDINT Measures"@en ,
-                      "Medidas EDINT"@es ;
-           <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/measure> .
-
-_:genid11 rdfs:label "W3C Data Cube"@en ,
+_:genid10 rdfs:label "W3C Data Cube"@en ,
                       "W3C Data Cube"@es ;
            <https://w3id.org/widoco/vocab#vocabularyIRI> <http://purl.org/linked-data/cube> .
 
-_:genid12 rdfs:label "Dimensiones EDINT"@es ,
-                      "EDINT Dimensions"@en ;
-           <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/dimension> .
+_:genid11 rdfs:label "Territorio (esadm)"@es ,
+                      "Territory (esadm)"@en ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+
+_:genid12 rdfs:label "OWL-Time"@en ,
+                      "OWL-Time"@es ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.w3.org/2006/time> .
 
 #################################################################
 #    Annotation properties
@@ -151,22 +151,6 @@ _:genid12 rdfs:label "Dimensiones EDINT"@es ,
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
-###  http://schema.org/affiliation
-<http://schema.org/affiliation> rdf:type owl:AnnotationProperty .
-
-
-###  http://schema.org/codeRepository
-<http://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
-
-
-###  http://schema.org/creativeWorkStatus
-<http://schema.org/creativeWorkStatus> rdf:type owl:AnnotationProperty .
-
-
-###  http://schema.org/funding
-<http://schema.org/funding> rdf:type owl:AnnotationProperty .
-
-
 ###  http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion
 <http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> rdf:type owl:AnnotationProperty ;
                                                                         rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/dimension#refArea> .
@@ -188,6 +172,22 @@ _:genid12 rdfs:label "Dimensiones EDINT"@es ,
 
 ###  http://xmlns.com/foaf/0.1/name
 <http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/affiliation
+<https://schema.org/affiliation> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/codeRepository
+<https://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/creativeWorkStatus
+<https://schema.org/creativeWorkStatus> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/funding
+<https://schema.org/funding> rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/widoco/vocab#jsonldSerialization
@@ -343,20 +343,20 @@ rdfs:Resource rdf:type owl:Class .
                                                   _:genid21 ,
                                                   _:genid22 .
 
-_:genid17 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> ;
-           <http://purl.org/linked-data/cube#order> 2 .
-
-_:genid18 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> ;
+_:genid17 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> ;
            <http://purl.org/linked-data/cube#order> 3 .
+
+_:genid18 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> ;
+           <http://purl.org/linked-data/cube#order> 2 .
 
 _:genid19 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> ;
            <http://purl.org/linked-data/cube#order> 1 .
 
-_:genid20 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality> ;
-           <http://purl.org/linked-data/cube#order> 5 .
-
-_:genid21 <http://purl.org/linked-data/cube#measure> <http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> ;
+_:genid20 <http://purl.org/linked-data/cube#measure> <http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> ;
            <http://purl.org/linked-data/cube#order> 6 .
+
+_:genid21 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality> ;
+           <http://purl.org/linked-data/cube#order> 5 .
 
 _:genid22 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> ;
            <http://purl.org/linked-data/cube#order> 4 .
