@@ -31,6 +31,8 @@
                   [ foaf:name "Diego Conde" ; schema:affiliation <https://oeg.fi.upm.es/> ] ;
     dcterms:title "Cubo de Datos EDINT de Gasto Comercial"@es  ;
     dcterms:title "EDINT Commercial Expenditure Data Cube"@en ;
+    rdfs:label "Cubo de Datos de Gasto Comercial"@es ;
+    rdfs:label "Commercial Expenditure Data Cube"@en ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespaceUri <https://edint.es/def/cubo-gasto-comercial#> ;
     vann:preferredNamespacePrefix "edintgast" ;
