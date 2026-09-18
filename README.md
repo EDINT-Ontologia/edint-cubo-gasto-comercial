@@ -1,4 +1,4 @@
-# Cubo de Datos EDINT de Gasto Comercial
+# Cubo de datos EDINT de gasto comercial (EDINT Commercial Expenditure Data Cube)
 
 Este recurso define un **cubo de datos RDF** para representar información agregada sobre **gasto comercial** en función de distintas dimensiones de análisis, como la región administrativa, el periodo temporal, el sector, la actividad económica y la nacionalidad. El modelo se ha desarrollado siguiendo el vocabulario **RDF Data Cube**, lo que permite estructurar la información de forma interoperable, reutilizable y preparada para su consulta mediante SPARQL.
 
