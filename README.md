@@ -1,4 +1,4 @@
-# Cubo de datos EDINT de gasto comercial (EDINT Commercial Expenditure Data Cube)
+# Cubo de Datos EDINT de Gasto Comercial
 
 [![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/cubo-gasto-comercial)
 ![Prefijo](https://img.shields.io/badge/prefijo-edintgast-informational)
