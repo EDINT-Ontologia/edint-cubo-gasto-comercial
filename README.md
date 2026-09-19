@@ -1,10 +1,14 @@
-# Cubo de datos EDINT de gasto comercial (EDINT Commercial Expenditure Data Cube)
+# Cubo de Datos EDINT de Gasto Comercial
+
+[![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/cubo-gasto-comercial)
+![Prefijo](https://img.shields.io/badge/prefijo-edintgast-informational)
+[![Licencia](https://img.shields.io/badge/licencia-CC%20BY--SA%204.0-lightgrey)](LICENSE)
 
 Este recurso define un **cubo de datos RDF** para representar información agregada sobre **gasto comercial** en función de distintas dimensiones de análisis, como la región administrativa, el periodo temporal, el sector, la actividad económica y la nacionalidad. El modelo se ha desarrollado siguiendo el vocabulario **RDF Data Cube**, lo que permite estructurar la información de forma interoperable, reutilizable y preparada para su consulta mediante SPARQL.
 
 Este cubo de datos está siendo desarrollado en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es/)).
 
-# Propósito y alcance del cubo de datos (Purpose and scope of the data cube)
+## Propósito y alcance del cubo de datos (Purpose and scope of the data cube)
 
 El cubo de datos de gasto comercial proporciona un modelo semántico para describir observaciones estadísticas relacionadas con el gasto realizado en contextos comerciales. Cada observación combina un conjunto de dimensiones, área administrativa, tiempo, sector, actividad económica y nacionalidad, junto con una medida numérica que representa el **importe del gasto**.
 
@@ -20,19 +24,19 @@ El alcance de este cubo se centra en la representación de **observaciones agreg
 
 La medida principal incluida en el cubo es el **importe del gasto comercial** , expresado como valor numérico.
 
-# Prefijo y espacio de nombres (Prefix and namespace)
+## Prefijo y espacio de nombres (Prefix and namespace)
 
-El prefijo del cubo de datos es **edintgast** y se encuentra publicada en el espacio de nombres: **[https://edint.es/def/cubo-gasto-comercial#]()**
+El prefijo de este cubo de datos es `edintgast` y se publica bajo el espacio de nombres https://edint.es/def/cubo-gasto-comercial#
 
-Las dimensiones se representan con el prefijo **edintdimension** y se encuentra en el espacio de nombres: **[http://vocab.linkeddata.es/datosabiertos/def/dimension#](http://vocab.linkeddata.es/datosabiertos/def/dimension#)**
+Las dimensiones se representan con el prefijo `edintdimension` y se encuentran en el espacio de nombres http://vocab.linkeddata.es/datosabiertos/def/dimension#
 
-Las medidas se representan con el prefijo **edintmeasure** y se encuentre en el espacio de nombres: **[http://vocab.linkeddata.es/datosabiertos/def/measure#](http://vocab.linkeddata.es/datosabiertos/def/measure#)**
+Las medidas se representan con el prefijo `edintmeasure` y se encuentran en el espacio de nombres http://vocab.linkeddata.es/datosabiertos/def/measure#
 
-# Modelo conceptual (Data Cube conceptualization)
+## Modelo conceptual (Data Cube conceptualization)
 
 ![Diagrama del modelo conceptual](diagrams/diagram.png)
 
-# Estructura del repositorio (Repository structure)
+## Estructura del repositorio (Repository structure)
 
 El repositorio debe contener (al menos) las siguientes carpetas
 
@@ -45,11 +49,11 @@ El repositorio debe contener (al menos) las siguientes carpetas
 | **ontology/**      | Contiene los archivos de implementación del cubo de datos en formatos como .owl .                                                                  |
 | **requirements/**  | Contiene todos los documentos utilizados para definir los requisitos del cubo de datos: preguntas de competencia y sus respectivas SPARQL queries. |
 
-# Mantenimiento y evolución (Maintenance and evolution)
+## Mantenimiento y evolución (Maintenance and evolution)
 
 Para manejar las incidencias o mejoras sugeridas con respecto al cubo de datos, recomendamos seguir las guías proporcionadas en ([Issues Management](./ISSUES.md)) para generar una incidencia.
 
-# Financiación (Funding)
+## Financiación (Funding)
 
 Este cubo de datos ha sido desarrollado en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es)).
 
