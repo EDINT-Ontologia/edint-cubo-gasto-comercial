@@ -10,24 +10,27 @@
 @prefix time:           <http://www.w3.org/2006/time#> .
 @prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
 
+@prefix ex:            <http://example.org/recurso/> .
+
+
 # 1) Reutilización del conjunto de datos y de la estructura de datos
-edintgast: a qb:DataSet ;
+ex:DatasetGastoComercial a qb:DataSet ;
     qb:structure edintgast:dsd .
 
 # 2) Periodo de referencia: la dimensión refPeriod tiene como rango time:Interval,
 #    por lo que se representa mediante una instancia explícita de intervalo temporal.
-<http://vocab.linkeddata.es/datosabiertos/recurso/comercio/cubo-gasto-comercial/interval/2025-01>
+ex:interval-2025-01
     a time:Interval ;
     rdfs:label "January 2025"@en ,
                "Enero de 2025"@es .
 
 # 3) Observación del conjunto de datos
-<http://vocab.linkeddata.es/datosabiertos/recurso/comercio/cubo-gasto-comercial/observation/obs001>
+ex:obs001
     a qb:Observation ;
     qb:dataSet edintgast: ;
-    edintdimension:refAdminRegion <http://vocab.linkeddata.es/datosabiertos/recurso/territorio/municipio/zaragoza> ;
+    edintdimension:refAdminRegion ex:zaragoza ;
     edintdimension:sector <https://datos.gob.es/kos/sector-publico/sector#comercio> ;
     edintdimension:economicActivity <http://lod.ine.es/kos/cnae/CNAE-2025/G> ;
-    edintdimension:refPeriod <http://vocab.linkeddata.es/datosabiertos/recurso/comercio/cubo-gasto-comercial/interval/2025-01> ;
+    edintdimension:refPeriod ex:interval-2025-01 ;
     edintdimension:nationality "Spanish"^^xsd:string ;
     edintmeasure:expenditureAmount "125430.75"^^xsd:decimal .
