@@ -20,7 +20,7 @@
 
 # -- Data Set --------------------------------------------
 
-<https://edint.es/def/cubo-gasto-comercial> a qb:DataSet, owl:Ontology ; 
+<https://edint.es/def/cubo-gasto-comercial> a  owl:Ontology ; 
     owl:versionIRI <https://edint.es/def/cubo-gasto-comercial/0.2.1> ;
     owl:imports <http://purl.org/linked-data/cube> ;
     dcterms:creator [ foaf:name "Daniel Doña" ; schema:affiliation <https://oeg.fi.upm.es/> ],
