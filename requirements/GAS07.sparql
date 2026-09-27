@@ -10,15 +10,15 @@ PREFIX edintmeasure: <http://vocab.linkeddata.es/datosabiertos/def/measure#>
 SELECT ?activity ?activityLabel ?nationality ?nationalityLabel (SUM(?amount) AS ?totalExpenditure)
 WHERE {
   ?obs a qb:Observation ;
-       qb:dataSet edintgast: ;
+       qb:dataSet edintgast:dataset1 ;
        edintdimension:refAdminRegion ?region ;
        edintdimension:refPeriod ?period ;
        edintdimension:economicActivity ?activity ;
        edintdimension:nationality ?nationality ;
        edintmeasure:expenditureAmount ?amount .
 
-  FILTER(?region = <URI_REGION>)
-  FILTER(?period = <URI_PERIODO>)
+  FILTER(?region = <http://vocab.linkeddata.es/datosabiertos/recurso/territorio/municipio/zaragoza>)
+  FILTER(?period = <https://example.org/interval/2025-01>)
 
   OPTIONAL { ?activity skos:prefLabel ?activityLabel . FILTER(LANG(?activityLabel) = "es") }
   OPTIONAL { ?nationality rdfs:label ?nationalityLabel . FILTER(LANG(?nationalityLabel) = "es") }

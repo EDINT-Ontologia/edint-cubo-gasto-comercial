@@ -74,6 +74,12 @@ edintgast:dsd a qb:DataStructureDefinition;
         [ qb:dimension edintdimension:nationality ; qb:order 5] ,
         [ qb:measure edintmeasure:expenditureAmount ; qb:order 6] .
 
+# Ejemplo de DataSet utilizado en examples/example.ttl
+edintgast:dataset1 a qb:DataSet ;
+    rdfs:label "Ejemplo de cubo de gasto comercial"@es ,
+               "Commercial expenditure cube example"@en ;
+    qb:structure edintgast:dsd .
+
 
 edintdimension:refAdminRegion
     a qb:DimensionProperty ;

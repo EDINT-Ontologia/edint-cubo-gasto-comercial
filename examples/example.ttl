@@ -1,4 +1,4 @@
-# Ejemplo de observación del cubo de gasto comercial utilizado en la documentación.
+# Ejemplos de observación del cubo de gasto comercial utilizados en la documentación.
 # Documentación: documentation/sections/description-es.html (Ejemplo 1) y
 #                documentation/sections/description-en.html (Example 1).
 
@@ -10,24 +10,90 @@
 @prefix time:           <http://www.w3.org/2006/time#> .
 @prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
 
-# 1) Reutilización del conjunto de datos y de la estructura de datos
-edintgast: a qb:DataSet ;
+# 1) Conjunto de datos y estructura de datos
+edintgast:dataset1 a qb:DataSet ;
     qb:structure edintgast:dsd .
 
-# 2) Periodo de referencia: la dimensión refPeriod tiene como rango time:Interval,
-#    por lo que se representa mediante una instancia explícita de intervalo temporal.
-<http://vocab.linkeddata.es/datosabiertos/recurso/comercio/cubo-gasto-comercial/interval/2025-01>
+# 2) Intervalos de periodo de referencia
+<https://example.org/interval/2025-01>
     a time:Interval ;
     rdfs:label "January 2025"@en ,
                "Enero de 2025"@es .
 
-# 3) Observación del conjunto de datos
-<http://vocab.linkeddata.es/datosabiertos/recurso/comercio/cubo-gasto-comercial/observation/obs001>
+<https://example.org/interval/2025-02>
+    a time:Interval ;
+    rdfs:label "February 2025"@en ,
+               "Febrero de 2025"@es .
+
+<https://example.org/interval/2025-03>
+    a time:Interval ;
+    rdfs:label "March 2025"@en ,
+               "Marzo de 2025"@es .
+
+# 3) Observaciones del conjunto de datos
+
+# Obs 001: Zaragoza, Enero 2025, comercio, CNAE G, Spanish
+<https://example.org/observation/obs001>
     a qb:Observation ;
-    qb:dataSet edintgast: ;
+    qb:dataSet edintgast:dataset1 ;
     edintdimension:refAdminRegion <http://vocab.linkeddata.es/datosabiertos/recurso/territorio/municipio/zaragoza> ;
     edintdimension:sector <https://datos.gob.es/kos/sector-publico/sector#comercio> ;
     edintdimension:economicActivity <http://lod.ine.es/kos/cnae/CNAE-2025/G> ;
-    edintdimension:refPeriod <http://vocab.linkeddata.es/datosabiertos/recurso/comercio/cubo-gasto-comercial/interval/2025-01> ;
+    edintdimension:refPeriod <https://example.org/interval/2025-01> ;
     edintdimension:nationality "Spanish"^^xsd:string ;
     edintmeasure:expenditureAmount "125430.75"^^xsd:decimal .
+
+# Obs 002: Barcelona, Febrero 2025, turismo, CNAE H, Spanish
+<https://example.org/observation/obs002>
+    a qb:Observation ;
+    qb:dataSet edintgast:dataset1 ;
+    edintdimension:refAdminRegion <http://vocab.linkeddata.es/datosabiertos/recurso/territorio/municipio/barcelona> ;
+    edintdimension:sector <https://datos.gob.es/kos/sector-publico/sector#turismo> ;
+    edintdimension:economicActivity <http://lod.ine.es/kos/cnae/CNAE-2025/H> ;
+    edintdimension:refPeriod <https://example.org/interval/2025-02> ;
+    edintdimension:nationality "Spanish"^^xsd:string ;
+    edintmeasure:expenditureAmount "98750.50"^^xsd:decimal .
+
+# Obs 003: Madrid, Marzo 2025, comercio, CNAE C, Spanish
+<https://example.org/observation/obs003>
+    a qb:Observation ;
+    qb:dataSet edintgast:dataset1 ;
+    edintdimension:refAdminRegion <http://vocab.linkeddata.es/datosabiertos/recurso/territorio/municipio/madrid> ;
+    edintdimension:sector <https://datos.gob.es/kos/sector-publico/sector#comercio> ;
+    edintdimension:economicActivity <http://lod.ine.es/kos/cnae/CNAE-2025/C> ;
+    edintdimension:refPeriod <https://example.org/interval/2025-03> ;
+    edintdimension:nationality "Spanish"^^xsd:string ;
+    edintmeasure:expenditureAmount "210500.00"^^xsd:decimal .
+
+# Obs 004: Sevilla, Enero 2025, salud, CNAE Q, Foreign
+<https://example.org/observation/obs004>
+    a qb:Observation ;
+    qb:dataSet edintgast:dataset1 ;
+    edintdimension:refAdminRegion <http://vocab.linkeddata.es/datosabiertos/recurso/territorio/municipio/sevilla> ;
+    edintdimension:sector <https://datos.gob.es/kos/sector-publico/sector#salud> ;
+    edintdimension:economicActivity <http://lod.ine.es/kos/cnae/CNAE-2025/Q> ;
+    edintdimension:refPeriod <https://example.org/interval/2025-01> ;
+    edintdimension:nationality "Foreign"^^xsd:string ;
+    edintmeasure:expenditureAmount "67320.25"^^xsd:decimal .
+
+# Obs 005: Valencia, Febrero 2025, comercio, CNAE G, Spanish
+<https://example.org/observation/obs005>
+    a qb:Observation ;
+    qb:dataSet edintgast:dataset1 ;
+    edintdimension:refAdminRegion <http://vocab.linkeddata.es/datosabiertos/recurso/territorio/municipio/valencia> ;
+    edintdimension:sector <https://datos.gob.es/kos/sector-publico/sector#comercio> ;
+    edintdimension:economicActivity <http://lod.ine.es/kos/cnae/CNAE-2025/G> ;
+    edintdimension:refPeriod <https://example.org/interval/2025-02> ;
+    edintdimension:nationality "Spanish"^^xsd:string ;
+    edintmeasure:expenditureAmount "143210.80"^^xsd:decimal .
+
+# Obs 006: Zaragoza, Marzo 2025, turismo, CNAE H, Foreign
+<https://example.org/observation/obs006>
+    a qb:Observation ;
+    qb:dataSet edintgast:dataset1 ;
+    edintdimension:refAdminRegion <http://vocab.linkeddata.es/datosabiertos/recurso/territorio/municipio/zaragoza> ;
+    edintdimension:sector <https://datos.gob.es/kos/sector-publico/sector#turismo> ;
+    edintdimension:economicActivity <http://lod.ine.es/kos/cnae/CNAE-2025/H> ;
+    edintdimension:refPeriod <https://example.org/interval/2025-03> ;
+    edintdimension:nationality "Foreign"^^xsd:string ;
+    edintmeasure:expenditureAmount "85100.40"^^xsd:decimal .
