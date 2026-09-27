@@ -16,7 +16,7 @@
                                                                                                                   "Oscar Corcho" ,
                                                                                                                   "Socorro Bernardos" ;
                                                                                <http://purl.org/dc/terms/issued> "2026-04-20"^^xsd:date ;
-                                                                               <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                                                               <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                                                                <http://purl.org/dc/terms/subject> <https://datos.gob.es/kos/sector-publico/sector#comercio> ,
                                                                                                                   <https://datos.gob.es/kos/sector-publico/sector#economia> ;
                                                                                <http://purl.org/dc/terms/title> "Vocabulario para la representación del cubo de dimensiones y medidas de gasto comercial dentro del proyecto EDINT"@es ,
