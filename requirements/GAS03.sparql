@@ -3,6 +3,7 @@
 PREFIX edintgast: <https://edint.es/def/cubo-gasto-comercial#>
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#>
+PREFIX edintmeasure: <http://vocab.linkeddata.es/datosabiertos/def/measure#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 SELECT ?sector ?sectorLabel (SUM(?amount) AS ?totalExpenditure)
