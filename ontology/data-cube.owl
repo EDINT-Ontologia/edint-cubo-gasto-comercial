@@ -12,8 +12,8 @@
 @prefix vann:         <http://purl.org/vocab/vann/> .
 @prefix esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
 @prefix time:     <http://www.w3.org/2006/time#> .
-@prefix edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#> .
-@prefix edintmeasure: <http://vocab.linkeddata.es/datosabiertos/def/measure#> .
+@prefix edintdimension: <https://edint.es/def/dimension#> .
+@prefix edintmeasure: <https://edint.es/def/measure#> .
 @prefix schema: <https://schema.org/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
@@ -72,7 +72,8 @@ edintgast:dsd a qb:DataStructureDefinition;
         [ qb:dimension edintdimension:economicActivity ; qb:order 3 ] ,
         [ qb:dimension edintdimension:refPeriod ; qb:order 4] ,
         [ qb:dimension edintdimension:nationality ; qb:order 5] ,
-        [ qb:measure edintmeasure:expenditureAmount ; qb:order 6] .
+        [ qb:measure edintmeasure:expenditureAmount ; qb:order 6] ,
+        [ qb:measure edintmeasure:numberOfTransactions ; qb:order 7] .
 
 
 edintdimension:refAdminRegion
@@ -122,6 +123,12 @@ edintmeasure:expenditureAmount  a qb:MeasureProperty;
     rdfs:subPropertyOf sdmx-measure:obsValue;
     rdfs:range xsd:decimal .
 
+edintmeasure:numberOfTransactions  a qb:MeasureProperty;
+    rdfs:label "Número de transacciones"@es, "Number of transactions"@en ;
+    rdfs:comment "Número total de transacciones realizadas en un contexto determinado"@es, "Total number of transactions made in a given context."@en ;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer .
+
 <https://oeg.fi.upm.es/> a foaf:Organization ; foaf:name "Ontology Engineering Group, UPM" .
 @prefix widoco: <https://w3id.org/widoco/vocab#> .
 
@@ -135,10 +142,10 @@ edintmeasure:expenditureAmount  a qb:MeasureProperty;
     widoco:vocabularyIRI <http://purl.org/linked-data/cube> ;
     rdfs:label "W3C Data Cube"@es , "W3C Data Cube"@en ] .
 <https://edint.es/def/cubo-gasto-comercial> widoco:vocabularyLabel [
-    widoco:vocabularyIRI <http://vocab.linkeddata.es/datosabiertos/def/dimension> ;
+    widoco:vocabularyIRI <https://edint.es/def/dimension> ;
     rdfs:label "Dimensiones EDINT"@es , "EDINT Dimensions"@en ] .
 <https://edint.es/def/cubo-gasto-comercial> widoco:vocabularyLabel [
-    widoco:vocabularyIRI <http://vocab.linkeddata.es/datosabiertos/def/measure> ;
+    widoco:vocabularyIRI <https://edint.es/def/measure> ;
     rdfs:label "Medidas EDINT"@es , "EDINT Measures"@en ] .
 <https://edint.es/def/cubo-gasto-comercial> widoco:vocabularyLabel [
     widoco:vocabularyIRI <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
