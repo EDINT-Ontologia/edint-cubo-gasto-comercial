@@ -8,13 +8,13 @@ PREFIX edintmeasure: <http://vocab.linkeddata.es/datosabiertos/def/measure#>
 SELECT (SUM(?amount) AS ?totalExpenditure)
 WHERE {
   ?obs a qb:Observation ;
-       qb:dataSet edintgast: ;
+       qb:dataSet edintgast:dataset1 ;
        edintdimension:refAdminRegion ?region ;
        edintdimension:refPeriod ?period ;
        edintdimension:economicActivity ?activity ;
        edintmeasure:expenditureAmount ?amount .
 
-  FILTER(?region = <URI_REGION>)
-  FILTER(?period = <URI_PERIODO>)
-  FILTER(?activity = <URI_ACTIVIDAD>)
+  FILTER(?region = <http://vocab.linkeddata.es/datosabiertos/recurso/territorio/municipio/zaragoza>)
+  FILTER(?period = <https://example.org/interval/2025-01>)
+  FILTER(?activity = <http://lod.ine.es/kos/cnae/CNAE-2025/G>)
 }
