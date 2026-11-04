@@ -42,7 +42,6 @@
 @prefix fnml: <http://semweb.mmlab.be/ns/fnml#>.
 @prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>.
 @base <http://example.com/ns#>.
-@prefix dct:    <http://purl.org/dc/terms/> .
 @prefix map:    <https://w3id.org/edint/cubo-gasto-comercial/mapping/> .
 
 map:person_000 dct:contributor foaf:Person ;
