@@ -8,22 +8,22 @@
 <https://edint.es/def/cubo-gasto-comercial> <http://purl.org/dc/terms/created> "2026-04-20"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://edint.es/def/cubo-gasto-comercial> <http://purl.org/dc/terms/creator> _:genid1 .
 _:genid1 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
-_:genid1 <http://xmlns.com/foaf/0.1/name> "Daniel Doña" .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Edna Ruckhaus" .
 <https://edint.es/def/cubo-gasto-comercial> <http://purl.org/dc/terms/creator> _:genid2 .
 _:genid2 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
-_:genid2 <http://xmlns.com/foaf/0.1/name> "Edna Ruckhaus" .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "Daniel Doña" .
 <https://edint.es/def/cubo-gasto-comercial> <http://purl.org/dc/terms/creator> _:genid3 .
 _:genid3 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
-_:genid3 <http://xmlns.com/foaf/0.1/name> "Lucía Sánchez" .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "Diego Conde" .
 <https://edint.es/def/cubo-gasto-comercial> <http://purl.org/dc/terms/creator> _:genid4 .
 _:genid4 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
-_:genid4 <http://xmlns.com/foaf/0.1/name> "Oscar Corcho" .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "Socorro Bernardos" .
 <https://edint.es/def/cubo-gasto-comercial> <http://purl.org/dc/terms/creator> _:genid5 .
 _:genid5 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
-_:genid5 <http://xmlns.com/foaf/0.1/name> "Socorro Bernardos" .
+_:genid5 <http://xmlns.com/foaf/0.1/name> "Oscar Corcho" .
 <https://edint.es/def/cubo-gasto-comercial> <http://purl.org/dc/terms/creator> _:genid6 .
 _:genid6 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
-_:genid6 <http://xmlns.com/foaf/0.1/name> "Diego Conde" .
+_:genid6 <http://xmlns.com/foaf/0.1/name> "Lucía Sánchez" .
 <https://edint.es/def/cubo-gasto-comercial> <http://purl.org/dc/terms/description> "El propósito de este vocabulario es proporcionar la definición de la estructura del cubo de datos de gasto comercial. Para ello, se reutiliza el vocabulario W3C Data Cube y se han creado las instancias necesarias para definir dicha estructura, indicando las dimensiones y medidas utilizadas en este cubo.  Además, se reutilizan varios vocabularios y listas de códigos para describir los diferentes desgloses de la información sobre gasto comercial, como el territorio, el periodo de referencia, el sector de actividad económica y la nacionalidad."@es .
 <https://edint.es/def/cubo-gasto-comercial> <http://purl.org/dc/terms/description> "The purpose of this vocabulary is to provide the definition of the structure of the commercial expenditure data cube. To this end, the W3C Data Cube vocabulary is reused, and the necessary instances have been created to define such structure, indicating the dimensions and measures used in this cube.  Additionally, several vocabularies and code lists are reused to describe the different breakdowns of commercial expenditure information, such as territory, reference period, economic activity sector, and nationality."@en .
 <https://edint.es/def/cubo-gasto-comercial> <http://purl.org/dc/terms/issued> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -51,25 +51,25 @@ _:genid7 <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> .
 <https://edint.es/def/cubo-gasto-comercial> <https://w3id.org/widoco/vocab#rdfxmlSerialization> "ontology.rdf" .
 <https://edint.es/def/cubo-gasto-comercial> <https://w3id.org/widoco/vocab#turtleSerialization> "ontology.ttl" .
 <https://edint.es/def/cubo-gasto-comercial> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid8 .
-_:genid8 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://purl.org/linked-data/cube> .
-_:genid8 <http://www.w3.org/2000/01/rdf-schema#label> "W3C Data Cube"@es .
-_:genid8 <http://www.w3.org/2000/01/rdf-schema#label> "W3C Data Cube"@en .
+_:genid8 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/measure> .
+_:genid8 <http://www.w3.org/2000/01/rdf-schema#label> "Medidas EDINT"@es .
+_:genid8 <http://www.w3.org/2000/01/rdf-schema#label> "EDINT Measures"@en .
 <https://edint.es/def/cubo-gasto-comercial> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid9 .
 _:genid9 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/dimension> .
 _:genid9 <http://www.w3.org/2000/01/rdf-schema#label> "EDINT Dimensions"@en .
 _:genid9 <http://www.w3.org/2000/01/rdf-schema#label> "Dimensiones EDINT"@es .
 <https://edint.es/def/cubo-gasto-comercial> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid10 .
-_:genid10 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/measure> .
-_:genid10 <http://www.w3.org/2000/01/rdf-schema#label> "Medidas EDINT"@es .
-_:genid10 <http://www.w3.org/2000/01/rdf-schema#label> "EDINT Measures"@en .
+_:genid10 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://purl.org/linked-data/cube> .
+_:genid10 <http://www.w3.org/2000/01/rdf-schema#label> "W3C Data Cube"@es .
+_:genid10 <http://www.w3.org/2000/01/rdf-schema#label> "W3C Data Cube"@en .
 <https://edint.es/def/cubo-gasto-comercial> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid11 .
-_:genid11 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
-_:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "Territory (esadm)"@en .
-_:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "Territorio (esadm)"@es .
+_:genid11 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.w3.org/2006/time> .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "OWL-Time"@es .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "OWL-Time"@en .
 <https://edint.es/def/cubo-gasto-comercial> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid12 .
-_:genid12 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.w3.org/2006/time> .
-_:genid12 <http://www.w3.org/2000/01/rdf-schema#label> "OWL-Time"@es .
-_:genid12 <http://www.w3.org/2000/01/rdf-schema#label> "OWL-Time"@en .
+_:genid12 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+_:genid12 <http://www.w3.org/2000/01/rdf-schema#label> "Territory (esadm)"@en .
+_:genid12 <http://www.w3.org/2000/01/rdf-schema#label> "Territorio (esadm)"@es .
 # 
 # 
 # #################################################################
@@ -299,23 +299,23 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://edint.es/def/cubo-gasto-comercial#dsd
 <https://edint.es/def/cubo-gasto-comercial#dsd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DataStructureDefinition> .
 <https://edint.es/def/cubo-gasto-comercial#dsd> <http://purl.org/linked-data/cube#component> _:genid17 .
-_:genid17 <http://purl.org/linked-data/cube#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid17 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> .
+_:genid17 <http://purl.org/linked-data/cube#order> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid17 <http://purl.org/linked-data/cube#measure> <http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> .
 <https://edint.es/def/cubo-gasto-comercial#dsd> <http://purl.org/linked-data/cube#component> _:genid18 .
-_:genid18 <http://purl.org/linked-data/cube#order> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid18 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> .
+_:genid18 <http://purl.org/linked-data/cube#order> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid18 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality> .
 <https://edint.es/def/cubo-gasto-comercial#dsd> <http://purl.org/linked-data/cube#component> _:genid19 .
-_:genid19 <http://purl.org/linked-data/cube#order> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid19 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> .
+_:genid19 <http://purl.org/linked-data/cube#order> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid19 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> .
 <https://edint.es/def/cubo-gasto-comercial#dsd> <http://purl.org/linked-data/cube#component> _:genid20 .
-_:genid20 <http://purl.org/linked-data/cube#order> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid20 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> .
+_:genid20 <http://purl.org/linked-data/cube#order> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid20 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> .
 <https://edint.es/def/cubo-gasto-comercial#dsd> <http://purl.org/linked-data/cube#component> _:genid21 .
-_:genid21 <http://purl.org/linked-data/cube#order> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid21 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality> .
+_:genid21 <http://purl.org/linked-data/cube#order> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid21 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> .
 <https://edint.es/def/cubo-gasto-comercial#dsd> <http://purl.org/linked-data/cube#component> _:genid22 .
-_:genid22 <http://purl.org/linked-data/cube#order> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid22 <http://purl.org/linked-data/cube#measure> <http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> .
+_:genid22 <http://purl.org/linked-data/cube#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid22 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> .
 # 
 # 
 # 

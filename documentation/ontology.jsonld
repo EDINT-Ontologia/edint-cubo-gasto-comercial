@@ -1,7 +1,7 @@
 [ {
   "@id" : "_:genid1",
   "http://xmlns.com/foaf/0.1/name" : [ {
-    "@value" : "Daniel Doña"
+    "@value" : "Edna Ruckhaus"
   } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "https://oeg.fi.upm.es/"
@@ -10,28 +10,16 @@
   "@id" : "_:genid10",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Medidas EDINT"
+    "@value" : "W3C Data Cube"
   }, {
     "@language" : "en",
-    "@value" : "EDINT Measures"
+    "@value" : "W3C Data Cube"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/measure"
+    "@id" : "http://purl.org/linked-data/cube"
   } ]
 }, {
   "@id" : "_:genid11",
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Territory (esadm)"
-  }, {
-    "@language" : "es",
-    "@value" : "Territorio (esadm)"
-  } ],
-  "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
-  } ]
-}, {
-  "@id" : "_:genid12",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
     "@value" : "OWL-Time"
@@ -41,6 +29,18 @@
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
     "@id" : "http://www.w3.org/2006/time"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Territory (esadm)"
+  }, {
+    "@language" : "es",
+    "@value" : "Territorio (esadm)"
+  } ],
+  "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
   } ]
 }, {
   "@id" : "_:genid13",
@@ -56,59 +56,6 @@
   } ]
 }, {
   "@id" : "_:genid17",
-  "http://purl.org/linked-data/cube#dimension" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion"
-  } ],
-  "http://purl.org/linked-data/cube#order" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid18",
-  "http://purl.org/linked-data/cube#dimension" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/dimension#sector"
-  } ],
-  "http://purl.org/linked-data/cube#order" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "2"
-  } ]
-}, {
-  "@id" : "_:genid19",
-  "http://purl.org/linked-data/cube#dimension" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity"
-  } ],
-  "http://purl.org/linked-data/cube#order" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "3"
-  } ]
-}, {
-  "@id" : "_:genid2",
-  "http://xmlns.com/foaf/0.1/name" : [ {
-    "@value" : "Edna Ruckhaus"
-  } ],
-  "https://schema.org/affiliation" : [ {
-    "@id" : "https://oeg.fi.upm.es/"
-  } ]
-}, {
-  "@id" : "_:genid20",
-  "http://purl.org/linked-data/cube#dimension" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod"
-  } ],
-  "http://purl.org/linked-data/cube#order" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "4"
-  } ]
-}, {
-  "@id" : "_:genid21",
-  "http://purl.org/linked-data/cube#dimension" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality"
-  } ],
-  "http://purl.org/linked-data/cube#order" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "5"
-  } ]
-}, {
-  "@id" : "_:genid22",
   "http://purl.org/linked-data/cube#measure" : [ {
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount"
   } ],
@@ -117,9 +64,62 @@
     "@value" : "6"
   } ]
 }, {
+  "@id" : "_:genid18",
+  "http://purl.org/linked-data/cube#dimension" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality"
+  } ],
+  "http://purl.org/linked-data/cube#order" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "5"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "http://purl.org/linked-data/cube#dimension" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod"
+  } ],
+  "http://purl.org/linked-data/cube#order" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "4"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Daniel Doña"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://oeg.fi.upm.es/"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "http://purl.org/linked-data/cube#dimension" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity"
+  } ],
+  "http://purl.org/linked-data/cube#order" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "http://purl.org/linked-data/cube#dimension" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/dimension#sector"
+  } ],
+  "http://purl.org/linked-data/cube#order" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "http://purl.org/linked-data/cube#dimension" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion"
+  } ],
+  "http://purl.org/linked-data/cube#order" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ]
+}, {
   "@id" : "_:genid3",
   "http://xmlns.com/foaf/0.1/name" : [ {
-    "@value" : "Lucía Sánchez"
+    "@value" : "Diego Conde"
   } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "https://oeg.fi.upm.es/"
@@ -127,7 +127,7 @@
 }, {
   "@id" : "_:genid4",
   "http://xmlns.com/foaf/0.1/name" : [ {
-    "@value" : "Oscar Corcho"
+    "@value" : "Socorro Bernardos"
   } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "https://oeg.fi.upm.es/"
@@ -135,7 +135,7 @@
 }, {
   "@id" : "_:genid5",
   "http://xmlns.com/foaf/0.1/name" : [ {
-    "@value" : "Socorro Bernardos"
+    "@value" : "Oscar Corcho"
   } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "https://oeg.fi.upm.es/"
@@ -143,7 +143,7 @@
 }, {
   "@id" : "_:genid6",
   "http://xmlns.com/foaf/0.1/name" : [ {
-    "@value" : "Diego Conde"
+    "@value" : "Lucía Sánchez"
   } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "https://oeg.fi.upm.es/"
@@ -163,13 +163,13 @@
   "@id" : "_:genid8",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "W3C Data Cube"
+    "@value" : "Medidas EDINT"
   }, {
     "@language" : "en",
-    "@value" : "W3C Data Cube"
+    "@value" : "EDINT Measures"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://purl.org/linked-data/cube"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/measure"
   } ]
 }, {
   "@id" : "_:genid9",
