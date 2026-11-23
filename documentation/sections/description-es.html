@@ -94,11 +94,16 @@ edintgast:DSD_CommercialExpenditure a qb:DataStructureDefinition ;
   <b>**1) Definición del conjunto de datos y su relación con la estructura de datos:**</b> Este ejemplo contiene un conjunto de datos, representado por <code>ex:dataset/DS_CommercialExpenditure</code>, que está vinculado a la estructura <code>edintgast:DSD_CommercialExpenditure</code> mediante la propiedad <a href="http://purl.org/linked-data/cube#structure">qb:structure</a>.
   </span>
 
-  <pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
+  <pre><textarea style="resize:none" readonly id="code3" name="code" rows="25" cols="100">
   ex:dataset/DS_CommercialExpenditure a qb:DataSet ; 
     qb:structure edintgast:DSD_CommercialExpenditure .
   </textarea></pre>
- 
+ <script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code3"), {
+        mode: "text/turtle",
+        matchBrackets: true
+    });
+</script>
 
   <span class="markdown">
   <b>**2) Identificación de las dimensiones y las medidas relevantes:**</b> La estructura <code>edintgast:DSD_CommercialExpenditure</code> contiene las dimensiones y las medidas del cubo de gasto comercial. En este ejemplo se utilizan las dimensiones <a href="#refAdminRegion">edintdimension:refAdminRegion</a>, <a href="#sector">edintdimension:sector</a>, <a href="#economicActivity">edintdimension:economicActivity</a>, <a href="#refPeriod">edintdimension:refPeriod</a> y <a href="#nationality">edintdimension:nationality</a>, junto con las medidas <a href="#expenditureAmount">edintmeasure:expenditureAmount</a> y <a href="#numberOfTransactions">edintmeasure:numberOfTransactions</a>.
@@ -106,19 +111,24 @@ edintgast:DSD_CommercialExpenditure a qb:DataStructureDefinition ;
   Es importante señalar que la dimensión <a href="#refPeriod">edintdimension:refPeriod</a> tiene como rango <code>time:Interval</code>, por lo que el periodo de referencia debe representarse mediante una instancia explícita de intervalo temporal.
   </span>
 
-  <pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
+  <pre><textarea style="resize:none" readonly id="code4" name="code" rows="25" cols="100">
   ex:interval/2025-01
     a time:Interval ;
     rdfs:label "January 2025"@en ,
                "Enero de 2025"@es .
   </textarea></pre>
-  
+   <script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code4"), {
+        mode: "text/turtle",
+        matchBrackets: true
+    });
+</script>
 
   <span class="markdown">
   <b>**3) Definición de una observación del conjunto de datos:**</b> El último paso consiste en crear una instancia de <a href="http://purl.org/linked-data/cube#Observation">qb:Observation</a> y vincularla al conjunto de datos mediante la propiedad <a href="http://purl.org/linked-data/cube#dataSet">qb:dataSet</a>. A continuación, se asignan los valores correspondientes a las dimensiones seleccionadas y a la medida de importe de gasto.
   </span>
 
-  <pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
+  <pre><textarea style="resize:none" readonly id="code5" name="code" rows="25" cols="100">
   ex:observation/obs001;
     a qb:Observation ;
     qb:dataSet ex:dataset/DS_CommercialExpenditure ;
@@ -130,7 +140,12 @@ edintgast:DSD_CommercialExpenditure a qb:DataStructureDefinition ;
     edintmeasure:expenditureAmount "125430.75"^^xsd:decimal ;
     edintmeasure:numberOfTransactions "313"^^xsd:integer .
   </textarea></pre>
-
+ <script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code5"), {
+        mode: "text/turtle",
+        matchBrackets: true
+    });
+</script>
   <span class="markdown">
   Esta observación indica que, en el municipio de Zaragoza, durante el intervalo temporal correspondiente a enero de 2025, el gasto comercial asociado al sector comercio, a una actividad económica concreta y a la nacionalidad española es de <b>125.430,75</b> y el número total de transacciones realizadas es <b>313</b> .
 
