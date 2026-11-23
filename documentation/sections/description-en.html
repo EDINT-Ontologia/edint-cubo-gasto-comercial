@@ -93,11 +93,16 @@ The steps required to represent a specific observation are described below.
 <b>**1) Defining the dataset and its relationship with the data structure:**</b> This example contains a dataset, represented by <code>ex:dataset/DS_CommercialExpenditure</code>, which is linked to the structure <code>edintgast:DSD_CommercialExpenditure</code> via the property <a href="http://purl.org/linked-data/cube#structure">qb:structure</a>. 
 </span>
 
-<pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
+<pre><textarea style="resize:none" readonly id="code3" name="code" rows="25" cols="100">
 ex:dataset/DS_CommercialExpenditure a qb:DataSet ; 
   qb:structure edintgast:DSD_CommercialExpenditure . 
 </textarea></pre>
-
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code3"), {
+        mode: "text/turtle",
+        matchBrackets: true
+    });
+</script>
 
 <span class="markdown">
 <b>**2) Identifying the relevant dimensions and measures:**</b> The structure <code>edintgast:DSD_CommercialExpenditure</code> contains the dimensions and measures for the commercial expenditure cube. In this example, the dimensions <a href="#refAdminRegion">edintdimension:refAdminRegion</a>, <a href="#sector">edintdimension:sector</a>, <a href="#economicActivity">edintdimension:economicActivity</a>, <a href="#refPeriod">edintdimension:refPeriod</a>, and <a href="#nationality">edintdimension:nationality</a> are used, along with the measures <a href="#expenditureAmount">edintmeasure:expenditureAmount</a> and <a href="#numberOfTransactions">edintmeasure:numberOfTransactions</a>. 
@@ -105,19 +110,24 @@ ex:dataset/DS_CommercialExpenditure a qb:DataSet ;
 It is important to note that the <a href="#refPeriod">edintdimension:refPeriod</a> dimension has a range of <code>time:Interval</code>; therefore, the reference period must be represented by an explicit instance of a time interval. 
 </span>
 
-<pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
+<pre><textarea style="resize:none" readonly id="code4" name="code" rows="25" cols="100">
 ex:interval/2025-01
   a time:Interval ; 
   rdfs:label "January 2025"@en ,
              "Enero de 2025"@es . 
 </textarea></pre>
-
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code4"), {
+        mode: "text/turtle",
+        matchBrackets: true
+    });
+</script>
 
 <span class="markdown">
 <b>**3) Defining an observation in the dataset:**</b> The final step involves creating an instance of <a href="http://purl.org/linked-data/cube#Observation">qb:Observation</a> and linking it to the dataset using the <a href="http://purl.org/linked-data/cube#dataSet">qb:dataSet</a> property. Next, the corresponding values ​​are assigned to the selected dimensions and to the expenditure amount measure. 
 </span>
 
-<pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
+<pre><textarea style="resize:none" readonly id="code5" name="code" rows="25" cols="100">
 ex:observation/obs001; 
   a qb:Observation ; 
   qb:dataSet ex:dataset/DS_CommercialExpenditure ; 
@@ -129,6 +139,12 @@ ex:observation/obs001;
   edintmeasure:expenditureAmount "125430.75"^^xsd:decimal ; 
   edintmeasure:numberOfTransactions "313"^^xsd:integer . 
 </textarea></pre>
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code5"), {
+        mode: "text/turtle",
+        matchBrackets: true
+    });
+</script>
 
 <span class="markdown">
 This observation indicates that, in the municipality of Zaragoza, during the time interval corresponding to January 2025, the commercial expenditure associated with the commerce sector, a specific economic activity, and the Spanish nationality amounts to <b>125,430.75</b>, and the total number of transactions carried out is <b>313</b>. 
