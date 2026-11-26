@@ -41,7 +41,7 @@ def _binds_efectivos_ttl(path):
         g.parse(path.as_posix(), format="turtle")
     except Exception:
         return {}  # ya lo reporta test_parseo
-    por_defecto = dict(Graph().namespaces())
+    por_defecto = _bindings_turtle_vacios()
     out = {}
     for alias, uri in g.namespaces():
         a, u = str(alias), str(uri)
@@ -51,13 +51,23 @@ def _binds_efectivos_ttl(path):
     return out
 
 
+def _bindings_turtle_vacios() -> dict[str, str]:
+    """Bindings que rdflib pone por su cuenta al parsear Turtle."""
+    vacio = Graph()
+    vacio.parse(data="@prefix x: <http://example.org/x#> .", format="turtle")
+    return {str(a): str(u) for a, u in vacio.namespaces()}
+
+
 def _binds_efectivos_sparql(path):
     """Bindings SPARQL según el parser de rdflib (prologue traducido)."""
     try:
         q = translateQuery(parseQuery(path.read_text(errors="replace")))
     except Exception:
         return {}  # ya lo reporta test_cobertura/parseo
-    por_defecto = dict(Graph().namespaces())
+    # El prologue de rdflib inyecta los prefijos estándar de SPARQL, que no
+    # son del fichero: se calculan con una consulta vacía, no con Graph().
+    vacia = translateQuery(parseQuery("SELECT * WHERE { ?s ?p ?o }"))
+    por_defecto = {str(a): str(u) for a, u in vacia.prologue.namespace_manager.namespaces()}
     out = {}
     for alias, uri in q.prologue.namespace_manager.namespaces():
         a, u = str(alias), str(uri)

@@ -10,8 +10,8 @@
 @prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix edintgast: <https://edint.es/def/cubo-gasto-comercial#> .
-@prefix edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#> .
-@prefix edintmeasure: <http://vocab.linkeddata.es/datosabiertos/def/measure#> .
+@prefix edintdimension: <https://edint.es/def/dimension#> .
+@prefix edintmeasure: <https://edint.es/def/measure#> .
 
 edintgast:mappings_tm rdf:type rr:TriplesMap ;
     rml:logicalSource [ rml:referenceFormulation ql:CSV ;

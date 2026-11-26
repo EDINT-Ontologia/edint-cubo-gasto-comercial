@@ -28,9 +28,9 @@ La medida principal incluida en el cubo es el **importe del gasto comercial** , 
 
 El prefijo de este cubo de datos es `edintgast` y se publica bajo el espacio de nombres https://edint.es/def/cubo-gasto-comercial#
 
-Las dimensiones se representan con el prefijo `edintdimension` y se encuentran en el espacio de nombres http://vocab.linkeddata.es/datosabiertos/def/dimension#
+Las dimensiones se representan con el prefijo `edintdimension` y se encuentran en el espacio de nombres https://edint.es/def/dimension#
 
-Las medidas se representan con el prefijo `edintmeasure` y se encuentran en el espacio de nombres http://vocab.linkeddata.es/datosabiertos/def/measure#
+Las medidas se representan con el prefijo `edintmeasure` y se encuentran en el espacio de nombres https://edint.es/def/measure#
 
 ## Modelo conceptual (Data Cube conceptualization)
 
