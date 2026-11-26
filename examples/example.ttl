@@ -12,7 +12,7 @@
 
 # 1) Conjunto de datos y estructura de datos
 edintgast:dataset1 a qb:DataSet ;
-    qb:structure edintgast:dsd .
+    qb:structure edintgast:DSD_CommercialExpenditure .
 
 # 2) Intervalos de periodo de referencia
 <https://example.org/interval/2025-01>
