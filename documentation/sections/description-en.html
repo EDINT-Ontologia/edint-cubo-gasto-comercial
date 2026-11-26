@@ -1,154 +1,132 @@
-<h2 id="desc" class="list">Commercial Expenditure Data Cube: Description <span class="backlink"> back to <a href="#toc">table of contents</a></span></h2>
+<h2 id="desc" class="list">Commercial Expenditure Data Cube: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
 <span class="markdown">
-The <a href="https://www.w3.org/TR/vocab-data-cube">W3C Data Cube</a> vocabulary is used to generate the commercial expenditure data cube. This vocabulary is a W3C recommendation for publishing multidimensional data on the Web, facilitating its structured representation, interoperability, and reuse. Furthermore, this vocabulary is compatible with the SDMX (<i>Statistical Data and Metadata eXchange</i>) standard, which is widely used for the exchange of statistical data and metadata between organizations.
+For the generation of the commercial expenditure data cube, the <a href="https://www.w3.org/TR/vocab-data-cube">W3C Data Cube</a> vocabulary is reused. This vocabulary is a W3C recommendation for the publication of multidimensional data on the Web, which facilitates their structured representation, interoperability, and reuse. In addition, this vocabulary is compatible with the SDMX standard (<i>Statistical Data and Metadata eXchange</i>), which is widely used for the exchange of statistical data and metadata across organizations.
 </span>
 
 <center>
-<img src="https://www.w3.org/TR/vocab-data-cube/images/qb-fig1.png">
-<figcaption>Figure 1.- Diagram of the W3C Data Cube vocabulary.</figcaption>
+  <img src="https://www.w3.org/TR/vocab-data-cube/images/qb-fig1.png">
+  <figcaption>Figure 1.- Diagram of the W3C Data Cube vocabulary.</figcaption>
 </center>
 
 <span class="markdown">
-As shown in Figure 1, the W3C Data Cube contains various concepts and properties that allow for the description of statistical data at different levels of aggregation. In this vocabulary, the model is organized around the concept of a <a href="https://www.w3.org/TR/vocab-data-cube/#reference-datasets">qb:DataSet</a>, which represents a dataset that follows a structure defined by a <a href="https://www.w3.org/TR/vocab-data-cube/#dsd">qb:DataStructureDefinition</a> and is realized through a collection of observations represented as <a href="https://www.w3.org/TR/vocab-data-cube/#reference-datasets">qb:Observation</a> entities.
-</span> This specific vocabulary defines a data structure, represented by the instance <code>edintgast:DSD_CommercialExpenditure</code>. This structure groups together all the dimensions and measures necessary to represent information regarding commercial expenditure. As an example, a dataset—that is, a collection of observations—is defined, represented by the instance <code>ex:dataset/DS_CommercialExpenditure</code>. The components of a data structure are as follows:
+As shown in Figure 1, W3C Data Cube contains several concepts and properties that make it possible to describe statistical data at different levels of aggregation. In this vocabulary, the model is organized around the concept of <a href="https://www.w3.org/TR/vocab-data-cube/#reference-datasets">qb:DataSet</a>, which represents a dataset following a structure defined by a <a href="https://www.w3.org/TR/vocab-data-cube/#dsd">qb:DataStructureDefinition</a> and materialized through a set of observations represented by <a href="https://www.w3.org/TR/vocab-data-cube/#reference-datasets">qb:Observation</a>.
+
+Specifically, this vocabulary defines a single dataset, represented by the instance <code>edintgast:</code>, and a single data structure, represented by the instance <code>edintgast:dsd</code>. This structure gathers all the dimensions and measures required to represent commercial expenditure information.
 </span>
 
 <ul>
-<li><a href="https://www.w3.org/TR/vocab-data-cube/#dsd-dimensions">qb:DimensionProperty</a>: a component that identifies the dimensions of the observations, such as the administrative region of reference, the thematic sector, the economic activity, the reference period, or nationality. Dimensions typically draw their values ​​from code lists or classifications—often represented using SKOS—or from other controlled resources.</li>
-<li><a href="https://www.w3.org/TR/vocab-data-cube/#dsd-dimensions">qb:MeasureProperty</a>: a component that represents the measured value of the observed data. In this cube, the measures correspond to the total monetary value of commercial expenditure and the number of transactions.</li>
+  <li><a href="https://www.w3.org/TR/vocab-data-cube/#dsd-dimensions">qb:DimensionProperty</a>: component that identifies the dimensions of the observations, such as the reference administrative region, thematic sector, economic activity, reference period, or nationality. Dimensions usually take their values from code lists or classifications, typically represented using SKOS, or from other controlled resources.</li>
+  <li><a href="https://www.w3.org/TR/vocab-data-cube/#dsd-dimensions">qb:MeasureProperty</a>: component that represents the measured value of the observed data. In this cube, the measure corresponds to the total monetary amount of commercial expenditure.</li>
 </ul>
 
 <span class="markdown">
-To define these dimensions and measures, several reference vocabularies are reused:
+Several reference vocabularies are reused to define these dimensions and measures:
 </span>
 
 <ol>
-<li>SDMX (<i>Statistical Data and Metadata eXchange</i>) vocabularies:</li>
-<ul>
-<li><a href="http://purl.org/linked-data/sdmx/2009/dimension">sdmx-dimension</a>: reused as a basis for general statistical dimensions, particularly through specialization relationships such as <a href="#refAdminRegion">edintdimension:refAdminRegion</a> and <a href="#refPeriod">edintdimension:refPeriod</a>.</li>
-<li><a href="http://purl.org/linked-data/sdmx/2009/measure">sdmx-measure</a>: reused as a basis for the cube's measures, defined as subproperties of <code>sdmx-measure:obsValue</code>.</li>
-</ul>
-<li>Territorial and temporal vocabularies:</li>
-<ul>
-<li><a href="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio">esadm</a>: reused to indicate that the <a href="#refAdminRegion">edintdimension:refAdminRegion</a> dimension can take values ​​corresponding to municipalities, neighborhoods, or districts.</li>
-<li><a href="https://www.w3.org/TR/owl-time/">OWL-Time</a>: reused to model the temporal dimension, establishing that <a href="#refPeriod">edintdimension:refPeriod</a> has <code>time:Interval</code> as its range.</li>
-</ul>
-<li>SKOS code lists:</li>
-<ul>
-<li>The <a href="#sector">edintdimension:sector</a> dimension uses the public sector scheme published at <a href="https://datos.gob.es/kos/sector-publico/sector">datos.gob.es</a>.</li>
-<li>The dimension <a href="#economicActivity">edintdimension:economicActivity</a> reuses a controlled classification of economic activities, such as <a href="https://www.ine.es/daco/daco42/clasificaciones/cnae25/Estructura_CNAE2025.xlsx">CNAE 2025</a>, which has been transformed into a <a href="https://edint.es/def/censo-locales/kos/clasificaciones_cnae2025.ttl">SKOS taxonomy</a>. 
-</ul>
+  <li>SDMX vocabularies (<i>Statistical Data and Metadata eXchange</i>):</li>
+  <ul>
+    <li><a href="http://purl.org/linked-data/sdmx/2009/dimension">sdmx-dimension</a>: reused as the basis for general statistical dimensions, especially through specialization relationships such as <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion">edintdimension:refAdminRegion</a> and <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod">edintdimension:refPeriod</a>.</li>
+    <li><a href="http://purl.org/linked-data/sdmx/2009/measure">sdmx-measure</a>: reused as the basis for the cube measure, defined as a subproperty of <code>sdmx-measure:obsValue</code>.</li>
+  </ul>
+  <li>Territorial and temporal vocabularies:</li>
+  <ul>
+    <li><a href="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio">esadm</a>: reused to indicate that the dimension <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion">edintdimension:refAdminRegion</a> may take values corresponding to municipalities, neighborhoods, or districts.</li>
+    <li><a href="https://www.w3.org/TR/owl-time/">OWL-Time</a>: reused to model the temporal dimension, establishing that <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod">edintdimension:refPeriod</a> has <code>time:Interval</code> as its range.</li>
+  </ul>
+  <li>SKOS code lists:</li>
+  <ul>
+    <li>The dimension <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#sector">edintdimension:sector</a> reuses as a code list the public sector scheme published at <a href="https://datos.gob.es/kos/sector-publico/sector">datos.gob.es</a>.</li>
+    <li>The dimension <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity">edintdimension:economicActivity</a> reuses a controlled classification of economic activity, such as <a href="http://lod.ine.es/kos/cnae/CNAE-2025">CNAE 2025</a>.</li>
+  </ul>
 </ol>
 
 <span class="markdown">
-The commercial expenditure cube model is shown in Figure 2, which presents the dimensions and measures that comprise it.
+The commercial expenditure cube model is shown in Figure 2, where the dimensions and measures that compose it are presented.
 </span>
 
 <center>
-  <img src="images/diagram.png"/>
+  <img src="../diagrams/diagram.png">
   <figcaption>Figure 2.- Conceptual diagram of the commercial expenditure data cube.</figcaption>
 </center>
 
 <span class="markdown">
-The structure of the commercial expenditure cube is defined by the instance <a href="#edintgast:DSD_CommercialExpenditure">edintgast:DSD_CommercialExpenditure</a>, which groups all the dimensions and measures of the model. In this case, the reference administrative region, the sector, the economic activity, the reference period, and the nationality have been defined as dimensions. As for measures, the model includes the expenditure amount—representing the total monetary value of commercial expenditure incurred in a given context—and the total number of transactions carried out.
+The structure of the commercial expenditure cube is defined through the instance <a href="#https://edint.es/def/cubo-gasto-comercial#dsd">edintgast:dsd</a>, which groups all the dimensions and measures of the model. In this case, the reference administrative region, sector, economic activity, reference period, and nationality have been defined as dimensions. As measure, the model includes the expenditure amount, which represents the total monetary amount of commercial expenditure made in a given context.
 </span>
 
-<pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
-edintgast:DSD_CommercialExpenditure a qb:DataStructureDefinition ; 
-qb:component
-[ qb:dimension edintdimension:refAdminRegion ; qb:order 1 ] ,
-[ qb:dimension edintdimension:sector ; qb:order 2 ] ,
-[ qb:dimension edintdimension:economicActivity ; qb:order 3 ] ,
-[ qb:dimension edintdimension:refPeriod; qb:order 4 ] ,
-[ qb:dimension edintdimension:nationality ; qb:order 5 ] ,
-[ qb:measure edintmeasure:expenditureAmount ; qb:order 6 ] ,
-[ qb:measure edintmeasure:numberOfTransactions ; qb:order 7 ] .
-</textarea></pre>
-<script>
-var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
-mode: "text/turtle",
-matchBrackets: true
-});
-</script> </script>
+<pre>
+<a href="#ontology">edintgast:</a> a <a href="http://purl.org/linked-data/cube#DataSet">qb:DataSet</a> ; 
+    <a href="http://purl.org/linked-data/cube#structure">qb:structure</a> <a href="#https://edint.es/def/cubo-gasto-comercial#dsd">edintgast:dsd</a> .
+
+<a href="#https://edint.es/def/cubo-gasto-comercial#dsd">edintgast:dsd</a> a <a href="http://purl.org/linked-data/cube#DataStructureDefinition">qb:DataStructureDefinition</a> ;
+    <a href="http://purl.org/linked-data/cube#component">qb:component</a>
+        [ <a href="http://purl.org/linked-data/cube#dimension">qb:dimension</a> <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion">edintdimension:refAdminRegion</a> ; qb:order 1 ] ,
+        [ <a href="http://purl.org/linked-data/cube#dimension">qb:dimension</a> <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#sector">edintdimension:sector</a> ; qb:order 2 ] ,
+        [ <a href="http://purl.org/linked-data/cube#dimension">qb:dimension</a> <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity">edintdimension:economicActivity</a> ; qb:order 3 ] ,
+        [ <a href="http://purl.org/linked-data/cube#dimension">qb:dimension</a> <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod">edintdimension:refPeriod</a> ; qb:order 4 ] ,
+        [ <a href="http://purl.org/linked-data/cube#dimension">qb:dimension</a> <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality">edintdimension:nationality</a> ; qb:order 5 ] ,
+        [ <a href="http://purl.org/linked-data/cube#measure">qb:measure</a> <a href="#http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount">edintmeasure:expenditureAmount</a> ; qb:order 6 ] .
+</pre>
+
 
 <div id="cubogastocomercialejemplo">
-<h3 id="qb1" class="list">Example 1: Commercial expenditure amount by area, period, economic activity, sector, and nationality<span class="backlink"> back to <a href="#toc">table of contents</a></span></h3>
+  <h3 id="qb1" class="list">Example 1: Commercial expenditure amount by area, period, economic activity, sector, and nationality<span class="backlink"> back to <a href="#toc">index</a></span></h3>
 
-<span class="markdown">
-This example represents data corresponding to the <b>commercial expenditure amount</b> in a given administrative region, for a specific reference period, broken down by <b>economic activity</b>, <b>sector</b>, and <b>nationality</b>. 
-</span>
+  <span class="markdown">
+  This example represents the data for the <b>commercial expenditure amount</b> in a given administrative region, for a specific reference period, broken down by <b>economic activity</b>, <b>sector</b>, and <b>nationality</b>. Since this vocabulary already defines the dataset <code>edintgast:</code> and the data structure <code>edintgast:dsd</code>, there is no need to generate new dataset or structure instances; the existing ones can be reused.
+  </span>
 
-<center>
-<p><img src="images/diagram-example.png"/>
-<figcaption>Figure 3.- Example of an observation in the commercial expenditure cube by area, period, economic activity, sector, and nationality.</figcaption>
-</center></p>
+  <center>
+    <img src="../diagrams/diagram-example.png">
+    <figcaption>Figure 3.- Example of an observation in the commercial expenditure cube by area, period, economic activity, sector, and nationality.</figcaption>
+  </center>
 
-<span class="markdown">
-The steps required to represent a specific observation are described below. 
-</span>
+  <span class="markdown">
+  The steps required to represent a specific observation are described below.
+  </span>
 
-<span class="markdown">
+  <span class="markdown">
+  <b>**1) Reuse of the dataset and the data structure:**</b> This vocabulary contains a single dataset, represented by <code>edintgast:</code>, which is linked to the structure <code>edintgast:dsd</code> through the property <a href="http://purl.org/linked-data/cube#structure">qb:structure</a>.
+  </span>
 
-<b>**1) Defining the dataset and its relationship with the data structure:**</b> This example contains a dataset, represented by <code>ex:dataset/DS_CommercialExpenditure</code>, which is linked to the structure <code>edintgast:DSD_CommercialExpenditure</code> via the property <a href="http://purl.org/linked-data/cube#structure">qb:structure</a>. 
-</span>
+  <pre>
+<a href="#ontology">edintgast:</a> a <a href="http://purl.org/linked-data/cube#DataSet">qb:DataSet</a> ; 
+    <a href="http://purl.org/linked-data/cube#structure">qb:structure</a> <a href="#https://edint.es/def/cubo-gasto-comercial#dsd">edintgast:dsd</a> .
+  </pre>
 
-<pre><textarea style="resize:none" readonly id="code3" name="code" rows="25" cols="100">
-ex:dataset/DS_CommercialExpenditure a qb:DataSet ; 
-  qb:structure edintgast:DSD_CommercialExpenditure . 
-</textarea></pre>
-<script>
-    var editor2 = CodeMirror.fromTextArea(document.getElementById("code3"), {
-        mode: "text/turtle",
-        matchBrackets: true
-    });
-</script>
+  <span class="markdown">
+  <b>**2) Identification of the relevant dimensions and measure:**</b> The structure <code>edintgast:dsd</code> contains the dimensions and measure of the commercial expenditure cube. In this example, the dimensions <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion">edintdimension:refAdminRegion</a>, <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#sector">edintdimension:sector</a>, <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity">edintdimension:economicActivity</a>, <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod">edintdimension:refPeriod</a>, and <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality">edintdimension:nationality</a> are used together with the measure <a href="#http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount">edintmeasure:expenditureAmount</a>.
 
-<span class="markdown">
-<b>**2) Identifying the relevant dimensions and measures:**</b> The structure <code>edintgast:DSD_CommercialExpenditure</code> contains the dimensions and measures for the commercial expenditure cube. In this example, the dimensions <a href="#refAdminRegion">edintdimension:refAdminRegion</a>, <a href="#sector">edintdimension:sector</a>, <a href="#economicActivity">edintdimension:economicActivity</a>, <a href="#refPeriod">edintdimension:refPeriod</a>, and <a href="#nationality">edintdimension:nationality</a> are used, along with the measures <a href="#expenditureAmount">edintmeasure:expenditureAmount</a> and <a href="#numberOfTransactions">edintmeasure:numberOfTransactions</a>. 
+  It is important to note that the dimension <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod">edintdimension:refPeriod</a> has <code>time:Interval</code> as its range, so the reference period must be represented through an explicit instance of a temporal interval.
+  </span>
 
-It is important to note that the <a href="#refPeriod">edintdimension:refPeriod</a> dimension has a range of <code>time:Interval</code>; therefore, the reference period must be represented by an explicit instance of a time interval. 
-</span>
+  <pre>
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/comercio/cubo-gasto-comercial/interval/2025-01&gt;
+    a time:Interval ;
+    rdfs:label "January 2025"@en ,
+               "Enero de 2025"@es .
+  </pre>
 
-<pre><textarea style="resize:none" readonly id="code4" name="code" rows="25" cols="100">
-ex:interval/2025-01
-  a time:Interval ; 
-  rdfs:label "January 2025"@en ,
-             "Enero de 2025"@es . 
-</textarea></pre>
-<script>
-    var editor2 = CodeMirror.fromTextArea(document.getElementById("code4"), {
-        mode: "text/turtle",
-        matchBrackets: true
-    });
-</script>
+  <span class="markdown">
+  <b>**3) Definition of a dataset observation:**</b> The final step consists of creating an instance of <a href="http://purl.org/linked-data/cube#Observation">qb:Observation</a> and linking it to the dataset through the property <a href="http://purl.org/linked-data/cube#dataSet">qb:dataSet</a>. The corresponding values for the selected dimensions and measure are then assigned.
+  </span>
 
-<span class="markdown">
-<b>**3) Defining an observation in the dataset:**</b> The final step involves creating an instance of <a href="http://purl.org/linked-data/cube#Observation">qb:Observation</a> and linking it to the dataset using the <a href="http://purl.org/linked-data/cube#dataSet">qb:dataSet</a> property. Next, the corresponding values ​​are assigned to the selected dimensions and to the expenditure amount measure. 
-</span>
+  <pre>
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/comercio/cubo-gasto-comercial/observation/obs001&gt;
+    a <a href="http://purl.org/linked-data/cube#Observation">qb:Observation</a> ;
+    <a href="http://purl.org/linked-data/cube#dataSet">qb:dataSet</a> <a href="#ontology">edintgast:</a> ;
+    <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion">edintdimension:refAdminRegion</a> &lt;http://vocab.linkeddata.es/datosabiertos/recurso/territorio/municipio/zaragoza&gt; ;
+    <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#sector">edintdimension:sector</a> &lt;https://datos.gob.es/kos/sector-publico/sector#comercio&gt; ;
+    <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity">edintdimension:economicActivity</a> &lt;http://lod.ine.es/kos/cnae/CNAE-2025/G&gt; ;
+    <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod">edintdimension:refPeriod</a> &lt;http://vocab.linkeddata.es/datosabiertos/recurso/comercio/cubo-gasto-comercial/interval/2025-01&gt; ;
+    <a href="#http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality">edintdimension:nationality</a> "Spanish"^^xsd:string ;
+    <a href="#http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount">edintmeasure:expenditureAmount</a> "125430.75"^^xsd:decimal .
+  </pre>
 
-<pre><textarea style="resize:none" readonly id="code5" name="code" rows="25" cols="100">
-ex:observation/obs001; 
-  a qb:Observation ; 
-  qb:dataSet ex:dataset/DS_CommercialExpenditure ; 
-  edintdimension:refAdminRegion ex:territorio/municipio/zaragoza; ; 
-  edintdimension:sector &lt;https://datos.gob.es/kos/sector-publico/sector#comercio&gt; ; 
-  edintdimension:economicActivity &lt;http://lod.ine.es/kos/cnae/CNAE-2025/G&gt; ; 
-  edintdimension:refPeriod ex:interval/2025-01 ; 
-  edintdimension:nationality "Spanish"^^xsd:string ; 
-  edintmeasure:expenditureAmount "125430.75"^^xsd:decimal ; 
-  edintmeasure:numberOfTransactions "313"^^xsd:integer . 
-</textarea></pre>
-<script>
-    var editor2 = CodeMirror.fromTextArea(document.getElementById("code5"), {
-        mode: "text/turtle",
-        matchBrackets: true
-    });
-</script>
+  <span class="markdown">
+  This observation indicates that, in the municipality of Zaragoza, during the temporal interval corresponding to January 2025, the commercial expenditure associated with the commerce sector, a specific economic activity, and Spanish nationality is <b>125,430.75</b>.
 
-<span class="markdown">
-This observation indicates that, in the municipality of Zaragoza, during the time interval corresponding to January 2025, the commercial expenditure associated with the commerce sector, a specific economic activity, and the Spanish nationality amounts to <b>125,430.75</b>, and the total number of transactions carried out is <b>313</b>. 
-
-This example shows how a single observation in the cube combines various dimension values ​​with specific measures to represent information on commercial expenditure. Similarly, the same structure can be reused to represent expenditure values ​​across other administrative regions, reference periods, economic activities, sectors, or nationalities. 
-</span>
+  This example shows how a single cube observation combines several dimension values with a specific measure to represent commercial expenditure information. In the same way, the same structure can be reused to represent expenditure values for other administrative regions, reference periods, economic activities, sectors, or nationalities.
+  </span>
 </div>
