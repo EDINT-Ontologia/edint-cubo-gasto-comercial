@@ -128,17 +128,14 @@ _:genid12 <http://www.w3.org/2000/01/rdf-schema#label> "Territorio (esadm)"@es .
 # https://edint.es/def/dimension#refPeriod
 <https://edint.es/def/dimension#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <https://edint.es/def/dimension#refPeriod> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> .
-<https://edint.es/def/dimension#refPeriod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Interval> .
 # 
 # https://edint.es/def/measure#expenditureAmount
 <https://edint.es/def/measure#expenditureAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <https://edint.es/def/measure#expenditureAmount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/measure#obsValue> .
-<https://edint.es/def/measure#expenditureAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://edint.es/def/measure#numberOfTransactions
 <https://edint.es/def/measure#numberOfTransactions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <https://edint.es/def/measure#numberOfTransactions> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/measure#obsValue> .
-<https://edint.es/def/measure#numberOfTransactions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # https://schema.org/affiliation
 <https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -218,6 +215,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://edint.es/def/dimension#refPeriod
 <https://edint.es/def/dimension#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://edint.es/def/dimension#refPeriod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Interval> .
 # 
 # https://edint.es/def/dimension#sector
 <https://edint.es/def/dimension#sector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -234,9 +232,11 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://edint.es/def/measure#expenditureAmount
 <https://edint.es/def/measure#expenditureAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/measure#expenditureAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://edint.es/def/measure#numberOfTransactions
 <https://edint.es/def/measure#numberOfTransactions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://edint.es/def/measure#numberOfTransactions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # 
 # 
@@ -291,24 +291,31 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://edint.es/def/cubo-gasto-comercial#DSD_CommercialExpenditure> <http://purl.org/linked-data/cube#component> _:genid21 .
 _:genid21 <http://purl.org/linked-data/cube#order> "7"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid21 <http://purl.org/linked-data/cube#measure> <https://edint.es/def/measure#numberOfTransactions> .
+<https://edint.es/def/measure#numberOfTransactions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/def/cubo-gasto-comercial#DSD_CommercialExpenditure> <http://purl.org/linked-data/cube#component> _:genid22 .
 _:genid22 <http://purl.org/linked-data/cube#order> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid22 <http://purl.org/linked-data/cube#dimension> <https://edint.es/def/dimension#refPeriod> .
+<https://edint.es/def/dimension#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/def/cubo-gasto-comercial#DSD_CommercialExpenditure> <http://purl.org/linked-data/cube#component> _:genid23 .
 _:genid23 <http://purl.org/linked-data/cube#order> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid23 <http://purl.org/linked-data/cube#measure> <https://edint.es/def/measure#expenditureAmount> .
+<https://edint.es/def/measure#expenditureAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/def/cubo-gasto-comercial#DSD_CommercialExpenditure> <http://purl.org/linked-data/cube#component> _:genid24 .
 _:genid24 <http://purl.org/linked-data/cube#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid24 <http://purl.org/linked-data/cube#dimension> <https://edint.es/def/dimension#refAdminRegion> .
+<https://edint.es/def/dimension#refAdminRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/def/cubo-gasto-comercial#DSD_CommercialExpenditure> <http://purl.org/linked-data/cube#component> _:genid25 .
 _:genid25 <http://purl.org/linked-data/cube#order> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid25 <http://purl.org/linked-data/cube#dimension> <https://edint.es/def/dimension#sector> .
+<https://edint.es/def/dimension#sector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/def/cubo-gasto-comercial#DSD_CommercialExpenditure> <http://purl.org/linked-data/cube#component> _:genid26 .
 _:genid26 <http://purl.org/linked-data/cube#order> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid26 <http://purl.org/linked-data/cube#dimension> <https://edint.es/def/dimension#economicActivity> .
+<https://edint.es/def/dimension#economicActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/def/cubo-gasto-comercial#DSD_CommercialExpenditure> <http://purl.org/linked-data/cube#component> _:genid27 .
 _:genid27 <http://purl.org/linked-data/cube#order> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid27 <http://purl.org/linked-data/cube#dimension> <https://edint.es/def/dimension#nationality> .
+<https://edint.es/def/dimension#nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
 # https://edint.es/def/cubo-gasto-comercial#dataset1
 <https://edint.es/def/cubo-gasto-comercial#dataset1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -316,35 +323,28 @@ _:genid27 <http://purl.org/linked-data/cube#dimension> <https://edint.es/def/dim
 <https://edint.es/def/cubo-gasto-comercial#dataset1> <http://purl.org/linked-data/cube#structure> <https://edint.es/def/cubo-gasto-comercial#DSD_CommercialExpenditure> .
 # 
 # https://edint.es/def/dimension#economicActivity
-<https://edint.es/def/dimension#economicActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/def/dimension#economicActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#CodedProperty> .
 <https://edint.es/def/dimension#economicActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
 <https://edint.es/def/dimension#economicActivity> <http://purl.org/linked-data/cube#codeList> <http://lod.ine.es/kos/cnae/CNAE-2025> .
 # 
 # https://edint.es/def/dimension#nationality
-<https://edint.es/def/dimension#nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/def/dimension#nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
 # 
 # https://edint.es/def/dimension#refAdminRegion
-<https://edint.es/def/dimension#refAdminRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/def/dimension#refAdminRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
 # 
 # https://edint.es/def/dimension#refPeriod
-<https://edint.es/def/dimension#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/def/dimension#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
 # 
 # https://edint.es/def/dimension#sector
-<https://edint.es/def/dimension#sector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/def/dimension#sector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#CodedProperty> .
 <https://edint.es/def/dimension#sector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
 <https://edint.es/def/dimension#sector> <http://purl.org/linked-data/cube#codeList> <http://datos.gob.es/kos/sector-publico/sector> .
 # 
 # https://edint.es/def/measure#expenditureAmount
-<https://edint.es/def/measure#expenditureAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/def/measure#expenditureAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
 # 
 # https://edint.es/def/measure#numberOfTransactions
-<https://edint.es/def/measure#numberOfTransactions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/def/measure#numberOfTransactions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
 # 
 # https://example.org/recurso/dataset/DS_CommercialExpenditure

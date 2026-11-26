@@ -166,20 +166,17 @@ _:genid12 rdfs:label "Territorio (esadm)"@es ,
 
 ###  https://edint.es/def/dimension#refPeriod
 <https://edint.es/def/dimension#refPeriod> rdf:type owl:AnnotationProperty ;
-                                           rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> ;
-                                           rdfs:range <http://www.w3.org/2006/time#Interval> .
+                                           rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> .
 
 
 ###  https://edint.es/def/measure#expenditureAmount
 <https://edint.es/def/measure#expenditureAmount> rdf:type owl:AnnotationProperty ;
-                                                 rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ;
-                                                 rdfs:range xsd:decimal .
+                                                 rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/measure#obsValue> .
 
 
 ###  https://edint.es/def/measure#numberOfTransactions
 <https://edint.es/def/measure#numberOfTransactions> rdf:type owl:AnnotationProperty ;
-                                                    rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ;
-                                                    rdfs:range xsd:integer .
+                                                    rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/measure#obsValue> .
 
 
 ###  https://schema.org/affiliation
@@ -258,7 +255,8 @@ _:genid12 rdfs:label "Territorio (esadm)"@es ,
 
 
 ###  https://edint.es/def/dimension#refPeriod
-<https://edint.es/def/dimension#refPeriod> rdf:type owl:ObjectProperty .
+<https://edint.es/def/dimension#refPeriod> rdf:type owl:ObjectProperty ;
+                                           rdfs:range <http://www.w3.org/2006/time#Interval> .
 
 
 ###  https://edint.es/def/dimension#sector
@@ -271,11 +269,13 @@ _:genid12 rdfs:label "Territorio (esadm)"@es ,
 #################################################################
 
 ###  https://edint.es/def/measure#expenditureAmount
-<https://edint.es/def/measure#expenditureAmount> rdf:type owl:DatatypeProperty .
+<https://edint.es/def/measure#expenditureAmount> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:range xsd:decimal .
 
 
 ###  https://edint.es/def/measure#numberOfTransactions
-<https://edint.es/def/measure#numberOfTransactions> rdf:type owl:DatatypeProperty .
+<https://edint.es/def/measure#numberOfTransactions> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:range xsd:integer .
 
 
 #################################################################
