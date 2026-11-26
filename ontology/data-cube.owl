@@ -19,7 +19,7 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:edintgast="https://edint.es/def/cubo-gasto-comercial#"
      xmlns:edintmeasure="https://edint.es/def/measure#"
-     xmlns:sdmx-measure="http://purl.org/li nked-data/sdmx/2009/measure#"
+     xmlns:sdmx-measure="http://purl.org/linked-data/sdmx/2009/measure#"
      xmlns:edintdimension="https://edint.es/def/dimension#"
      xmlns:sdmx-dimension="http://purl.org/linked-data/sdmx/2009/dimension#"
      xmlns:kossectorpublico="http://datos.gob.es/kos/sector-publico/">
@@ -78,7 +78,7 @@ Additionally, several vocabularies and code lists are reused to describe the dif
         <dcterms:description xml:lang="es">El propósito de este vocabulario es proporcionar la definición de la estructura del cubo de datos de gasto comercial. Para ello, se reutiliza el vocabulario W3C Data Cube y se han creado las instancias necesarias para definir dicha estructura, indicando las dimensiones y medidas utilizadas en este cubo.  Además, se reutilizan varios vocabularios y listas de códigos para describir los diferentes desgloses de la información sobre gasto comercial, como el territorio, el periodo de referencia, el sector de actividad económica y la nacionalidad.</dcterms:description>
         <dcterms:description xml:lang="en">The purpose of this vocabulary is to provide the definition of the structure of the commercial expenditure data cube. To this end, the W3C Data Cube vocabulary is reused, and the necessary instances have been created to define such structure, indicating the dimensions and measures used in this cube.  Additionally, several vocabularies and code lists are reused to describe the different breakdowns of commercial expenditure information, such as territory, reference period, economic activity sector, and nationality.</dcterms:description>
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:issued>
-        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:modified>
         <dcterms:publisher>
             <rdf:Description>
@@ -92,7 +92,7 @@ Additionally, several vocabularies and code lists are reused to describe the dif
         <dcterms:title xml:lang="es">Cubo de Datos EDINT de Gasto Comercial</dcterms:title>
         <dcterms:title xml:lang="en">EDINT Commercial Expenditure Data Cube</dcterms:title>
         <vann:preferredNamespacePrefix>edintgast</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/cubo-gasto-comercial#"/>
+        <vann:preferredNamespaceUri>https://edint.es/def/cubo-gasto-comercial#</vann:preferredNamespaceUri>
         <rdfs:label xml:lang="en">Commercial Expenditure Data Cube</rdfs:label>
         <rdfs:label xml:lang="es">Cubo de Datos de Gasto Comercial</rdfs:label>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-cubo-gasto-comercial/releases/tag/v0.2.0"/>
@@ -502,6 +502,13 @@ Additionally, several vocabularies and code lists are reused to describe the dif
     </owl:NamedIndividual>
     
 
+
+    <!-- https://edint.es/def/cubo-gasto-comercial#dataset1 -->
+
+    <owl:NamedIndividual rdf:about="https://edint.es/def/cubo-gasto-comercial#dataset1">
+        <rdf:type rdf:resource="http://purl.org/linked-data/cube#DataSet"/>
+        <qb:structure rdf:resource="https://edint.es/def/cubo-gasto-comercial#DSD_CommercialExpenditure"/>
+    </owl:NamedIndividual>
 
     <!-- https://edint.es/def/cubo-gasto-comercial#DSD_CommercialExpenditure -->
 

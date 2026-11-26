@@ -33,8 +33,8 @@
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
 @prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>.
 @prefix edintgast: <https://edint.es/def/cubo-gasto-comercial#>.
-@prefix edintdimension: <https://edint.es/def/dimension#>.
-@prefix edintmeasure: <https://edint.es/def/measure#>.
+@prefix edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#>.
+@prefix edintmeasure: <http://vocab.linkeddata.es/datosabiertos/def/measure#>.
 @prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#>.
 @prefix schema: <http://schema.org/>.
 @prefix formats: <http://www.w3.org/ns/formats/>.
@@ -42,7 +42,6 @@
 @prefix fnml: <http://semweb.mmlab.be/ns/fnml#>.
 @prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>.
 @base <http://example.com/ns#>.
-@prefix dct:    <http://purl.org/dc/terms/> .
 @prefix map:    <https://w3id.org/edint/cubo-gasto-comercial/mapping/> .
 
 map:person_000 dct:contributor foaf:Person ;
